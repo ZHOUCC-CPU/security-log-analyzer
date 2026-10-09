@@ -1,0 +1,11 @@
+﻿.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.coverage
+.env
+.env.*
+datasets/private/
+datasets/processed/
+results/
+*.log

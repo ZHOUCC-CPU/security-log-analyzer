@@ -1,0 +1,110 @@
+{"behavior_label": 0, "case_id": "CASE-00001", "intent_annotation": "not_assessed", "rationale": "Out-of-scope destination", "scenario_id": "N02"}
+{"behavior_label": 1, "case_id": "CASE-00002", "intent_annotation": "authorized", "rationale": "Authorized cross-boundary NTLM", "scenario_id": "P03"}
+{"behavior_label": 1, "case_id": "CASE-00003", "intent_annotation": "simulated_suspicious", "rationale": "Correlated NTLM without Notice", "scenario_id": "P02"}
+{"behavior_label": 0, "case_id": "CASE-00004", "intent_annotation": "not_assessed", "rationale": "Conflicting endpoint addresses", "scenario_id": "N06"}
+{"behavior_label": 0, "case_id": "CASE-00005", "intent_annotation": "not_assessed", "rationale": "NTLM without connection evidence", "scenario_id": "N04"}
+{"behavior_label": 0, "case_id": "CASE-00006", "intent_annotation": "not_assessed", "rationale": "NTLM without connection evidence", "scenario_id": "N04"}
+{"behavior_label": 0, "case_id": "CASE-00007", "intent_annotation": "not_assessed", "rationale": "Reverse event chronology", "scenario_id": "N07"}
+{"behavior_label": 0, "case_id": "CASE-00008", "intent_annotation": "not_assessed", "rationale": "TCP connection only", "scenario_id": "N01"}
+{"behavior_label": 0, "case_id": "CASE-00009", "intent_annotation": "not_assessed", "rationale": "TCP connection only", "scenario_id": "N01"}
+{"behavior_label": 1, "case_id": "CASE-00010", "intent_annotation": "simulated_suspicious", "rationale": "Correlated NTLM and Notice", "scenario_id": "P01"}
+{"behavior_label": 0, "case_id": "CASE-00011", "intent_annotation": "not_assessed", "rationale": "TCP connection only", "scenario_id": "N01"}
+{"behavior_label": 0, "case_id": "CASE-00012", "intent_annotation": "not_assessed", "rationale": "TCP connection only", "scenario_id": "N01"}
+{"behavior_label": 0, "case_id": "CASE-00013", "intent_annotation": "not_assessed", "rationale": "Reverse event chronology", "scenario_id": "N07"}
+{"behavior_label": 0, "case_id": "CASE-00014", "intent_annotation": "not_assessed", "rationale": "Conflicting endpoint addresses", "scenario_id": "N06"}
+{"behavior_label": 0, "case_id": "CASE-00015", "intent_annotation": "not_assessed", "rationale": "TCP connection only", "scenario_id": "N01"}
+{"behavior_label": 0, "case_id": "CASE-00016", "intent_annotation": "not_assessed", "rationale": "Reverse event chronology", "scenario_id": "N07"}
+{"behavior_label": 0, "case_id": "CASE-00017", "intent_annotation": "not_assessed", "rationale": "Out-of-scope destination", "scenario_id": "N02"}
+{"behavior_label": 1, "case_id": "CASE-00018", "intent_annotation": "authorized", "rationale": "Authorized cross-boundary NTLM", "scenario_id": "P03"}
+{"behavior_label": 1, "case_id": "CASE-00019", "intent_annotation": "authorized", "rationale": "Authorized cross-boundary NTLM", "scenario_id": "P03"}
+{"behavior_label": 0, "case_id": "CASE-00020", "intent_annotation": "not_assessed", "rationale": "Reverse event chronology", "scenario_id": "N07"}
+{"behavior_label": 0, "case_id": "CASE-00021", "intent_annotation": "not_assessed", "rationale": "Out-of-scope destination", "scenario_id": "N02"}
+{"behavior_label": 0, "case_id": "CASE-00022", "intent_annotation": "not_assessed", "rationale": "TCP connection only", "scenario_id": "N01"}
+{"behavior_label": 0, "case_id": "CASE-00023", "intent_annotation": "not_assessed", "rationale": "Correlation exceeds 300 seconds", "scenario_id": "N08"}
+{"behavior_label": 0, "case_id": "CASE-00024", "intent_annotation": "not_assessed", "rationale": "Out-of-scope source", "scenario_id": "N03"}
+{"behavior_label": 0, "case_id": "CASE-00025", "intent_annotation": "not_assessed", "rationale": "Out-of-scope destination", "scenario_id": "N02"}
+{"behavior_label": 1, "case_id": "CASE-00026", "intent_annotation": "authorized", "rationale": "Authorized cross-boundary NTLM", "scenario_id": "P03"}
+{"behavior_label": 0, "case_id": "CASE-00027", "intent_annotation": "not_assessed", "rationale": "Reverse event chronology", "scenario_id": "N07"}
+{"behavior_label": 0, "case_id": "CASE-00028", "intent_annotation": "not_assessed", "rationale": "NTLM without connection evidence", "scenario_id": "N04"}
+{"behavior_label": 1, "case_id": "CASE-00029", "intent_annotation": "simulated_suspicious", "rationale": "Correlated NTLM without Notice", "scenario_id": "P02"}
+{"behavior_label": 1, "case_id": "CASE-00030", "intent_annotation": "simulated_suspicious", "rationale": "Correlated NTLM and Notice", "scenario_id": "P01"}
+{"behavior_label": 0, "case_id": "CASE-00031", "intent_annotation": "not_assessed", "rationale": "NTLM without connection evidence", "scenario_id": "N04"}
+{"behavior_label": 0, "case_id": "CASE-00032", "intent_annotation": "not_assessed", "rationale": "Reverse event chronology", "scenario_id": "N07"}
+{"behavior_label": 0, "case_id": "CASE-00033", "intent_annotation": "not_assessed", "rationale": "Reverse event chronology", "scenario_id": "N07"}
+{"behavior_label": 0, "case_id": "CASE-00034", "intent_annotation": "not_assessed", "rationale": "Mismatched connection UIDs", "scenario_id": "N05"}
+{"behavior_label": 0, "case_id": "CASE-00035", "intent_annotation": "not_assessed", "rationale": "Out-of-scope source", "scenario_id": "N03"}
+{"behavior_label": 1, "case_id": "CASE-00036", "intent_annotation": "simulated_suspicious", "rationale": "Correlated NTLM without Notice", "scenario_id": "P02"}
+{"behavior_label": 1, "case_id": "CASE-00037", "intent_annotation": "simulated_suspicious", "rationale": "Correlated NTLM and Notice", "scenario_id": "P01"}
+{"behavior_label": 1, "case_id": "CASE-00038", "intent_annotation": "simulated_suspicious", "rationale": "Correlated NTLM and Notice", "scenario_id": "P01"}
+{"behavior_label": 0, "case_id": "CASE-00039", "intent_annotation": "not_assessed", "rationale": "Conflicting endpoint addresses", "scenario_id": "N06"}
+{"behavior_label": 1, "case_id": "CASE-00040", "intent_annotation": "simulated_suspicious", "rationale": "Correlated NTLM without Notice", "scenario_id": "P02"}
+{"behavior_label": 0, "case_id": "CASE-00041", "intent_annotation": "not_assessed", "rationale": "Conflicting endpoint addresses", "scenario_id": "N06"}
+{"behavior_label": 0, "case_id": "CASE-00042", "intent_annotation": "not_assessed", "rationale": "TCP connection only", "scenario_id": "N01"}
+{"behavior_label": 0, "case_id": "CASE-00043", "intent_annotation": "not_assessed", "rationale": "Correlation exceeds 300 seconds", "scenario_id": "N08"}
+{"behavior_label": 1, "case_id": "CASE-00044", "intent_annotation": "simulated_suspicious", "rationale": "Correlated NTLM without Notice", "scenario_id": "P02"}
+{"behavior_label": 0, "case_id": "CASE-00045", "intent_annotation": "not_assessed", "rationale": "Correlation exceeds 300 seconds", "scenario_id": "N08"}
+{"behavior_label": 1, "case_id": "CASE-00046", "intent_annotation": "simulated_suspicious", "rationale": "Correlated NTLM and Notice", "scenario_id": "P01"}
+{"behavior_label": 0, "case_id": "CASE-00047", "intent_annotation": "not_assessed", "rationale": "NTLM without connection evidence", "scenario_id": "N04"}
+{"behavior_label": 0, "case_id": "CASE-00048", "intent_annotation": "not_assessed", "rationale": "TCP connection only", "scenario_id": "N01"}
+{"behavior_label": 0, "case_id": "CASE-00049", "intent_annotation": "not_assessed", "rationale": "Correlation exceeds 300 seconds", "scenario_id": "N08"}
+{"behavior_label": 0, "case_id": "CASE-00050", "intent_annotation": "not_assessed", "rationale": "Mismatched connection UIDs", "scenario_id": "N05"}
+{"behavior_label": 0, "case_id": "CASE-00051", "intent_annotation": "not_assessed", "rationale": "Out-of-scope destination", "scenario_id": "N02"}
+{"behavior_label": 0, "case_id": "CASE-00052", "intent_annotation": "not_assessed", "rationale": "NTLM without connection evidence", "scenario_id": "N04"}
+{"behavior_label": 0, "case_id": "CASE-00053", "intent_annotation": "not_assessed", "rationale": "NTLM without connection evidence", "scenario_id": "N04"}
+{"behavior_label": 0, "case_id": "CASE-00054", "intent_annotation": "not_assessed", "rationale": "Mismatched connection UIDs", "scenario_id": "N05"}
+{"behavior_label": 0, "case_id": "CASE-00055", "intent_annotation": "not_assessed", "rationale": "Conflicting endpoint addresses", "scenario_id": "N06"}
+{"behavior_label": 0, "case_id": "CASE-00056", "intent_annotation": "not_assessed", "rationale": "Out-of-scope source", "scenario_id": "N03"}
+{"behavior_label": 0, "case_id": "CASE-00057", "intent_annotation": "not_assessed", "rationale": "Conflicting endpoint addresses", "scenario_id": "N06"}
+{"behavior_label": 1, "case_id": "CASE-00058", "intent_annotation": "simulated_suspicious", "rationale": "Correlated NTLM and Notice", "scenario_id": "P01"}
+{"behavior_label": 0, "case_id": "CASE-00059", "intent_annotation": "not_assessed", "rationale": "Out-of-scope source", "scenario_id": "N03"}
+{"behavior_label": 0, "case_id": "CASE-00060", "intent_annotation": "not_assessed", "rationale": "Out-of-scope destination", "scenario_id": "N02"}
+{"behavior_label": 0, "case_id": "CASE-00061", "intent_annotation": "not_assessed", "rationale": "Reverse event chronology", "scenario_id": "N07"}
+{"behavior_label": 0, "case_id": "CASE-00062", "intent_annotation": "not_assessed", "rationale": "Conflicting endpoint addresses", "scenario_id": "N06"}
+{"behavior_label": 1, "case_id": "CASE-00063", "intent_annotation": "simulated_suspicious", "rationale": "Correlated NTLM without Notice", "scenario_id": "P02"}
+{"behavior_label": 0, "case_id": "CASE-00064", "intent_annotation": "not_assessed", "rationale": "Out-of-scope source", "scenario_id": "N03"}
+{"behavior_label": 1, "case_id": "CASE-00065", "intent_annotation": "simulated_suspicious", "rationale": "Correlated NTLM and Notice", "scenario_id": "P01"}
+{"behavior_label": 0, "case_id": "CASE-00066", "intent_annotation": "not_assessed", "rationale": "Conflicting endpoint addresses", "scenario_id": "N06"}
+{"behavior_label": 0, "case_id": "CASE-00067", "intent_annotation": "not_assessed", "rationale": "Mismatched connection UIDs", "scenario_id": "N05"}
+{"behavior_label": 0, "case_id": "CASE-00068", "intent_annotation": "not_assessed", "rationale": "Correlation exceeds 300 seconds", "scenario_id": "N08"}
+{"behavior_label": 0, "case_id": "CASE-00069", "intent_annotation": "not_assessed", "rationale": "NTLM without connection evidence", "scenario_id": "N04"}
+{"behavior_label": 1, "case_id": "CASE-00070", "intent_annotation": "authorized", "rationale": "Authorized cross-boundary NTLM", "scenario_id": "P03"}
+{"behavior_label": 0, "case_id": "CASE-00071", "intent_annotation": "not_assessed", "rationale": "Out-of-scope destination", "scenario_id": "N02"}
+{"behavior_label": 0, "case_id": "CASE-00072", "intent_annotation": "not_assessed", "rationale": "Out-of-scope source", "scenario_id": "N03"}
+{"behavior_label": 1, "case_id": "CASE-00073", "intent_annotation": "authorized", "rationale": "Authorized cross-boundary NTLM", "scenario_id": "P03"}
+{"behavior_label": 1, "case_id": "CASE-00074", "intent_annotation": "simulated_suspicious", "rationale": "Correlated NTLM without Notice", "scenario_id": "P02"}
+{"behavior_label": 0, "case_id": "CASE-00075", "intent_annotation": "not_assessed", "rationale": "Mismatched connection UIDs", "scenario_id": "N05"}
+{"behavior_label": 0, "case_id": "CASE-00076", "intent_annotation": "not_assessed", "rationale": "Mismatched connection UIDs", "scenario_id": "N05"}
+{"behavior_label": 0, "case_id": "CASE-00077", "intent_annotation": "not_assessed", "rationale": "TCP connection only", "scenario_id": "N01"}
+{"behavior_label": 1, "case_id": "CASE-00078", "intent_annotation": "simulated_suspicious", "rationale": "Correlated NTLM and Notice", "scenario_id": "P01"}
+{"behavior_label": 1, "case_id": "CASE-00079", "intent_annotation": "authorized", "rationale": "Authorized cross-boundary NTLM", "scenario_id": "P03"}
+{"behavior_label": 0, "case_id": "CASE-00080", "intent_annotation": "not_assessed", "rationale": "Conflicting endpoint addresses", "scenario_id": "N06"}
+{"behavior_label": 0, "case_id": "CASE-00081", "intent_annotation": "not_assessed", "rationale": "Mismatched connection UIDs", "scenario_id": "N05"}
+{"behavior_label": 0, "case_id": "CASE-00082", "intent_annotation": "not_assessed", "rationale": "Mismatched connection UIDs", "scenario_id": "N05"}
+{"behavior_label": 1, "case_id": "CASE-00083", "intent_annotation": "simulated_suspicious", "rationale": "Correlated NTLM without Notice", "scenario_id": "P02"}
+{"behavior_label": 0, "case_id": "CASE-00084", "intent_annotation": "not_assessed", "rationale": "Out-of-scope destination", "scenario_id": "N02"}
+{"behavior_label": 0, "case_id": "CASE-00085", "intent_annotation": "not_assessed", "rationale": "Out-of-scope source", "scenario_id": "N03"}
+{"behavior_label": 0, "case_id": "CASE-00086", "intent_annotation": "not_assessed", "rationale": "Out-of-scope source", "scenario_id": "N03"}
+{"behavior_label": 0, "case_id": "CASE-00087", "intent_annotation": "not_assessed", "rationale": "Correlation exceeds 300 seconds", "scenario_id": "N08"}
+{"behavior_label": 0, "case_id": "CASE-00088", "intent_annotation": "not_assessed", "rationale": "Out-of-scope source", "scenario_id": "N03"}
+{"behavior_label": 1, "case_id": "CASE-00089", "intent_annotation": "simulated_suspicious", "rationale": "Correlated NTLM and Notice", "scenario_id": "P01"}
+{"behavior_label": 0, "case_id": "CASE-00090", "intent_annotation": "not_assessed", "rationale": "Out-of-scope source", "scenario_id": "N03"}
+{"behavior_label": 0, "case_id": "CASE-00091", "intent_annotation": "not_assessed", "rationale": "Correlation exceeds 300 seconds", "scenario_id": "N08"}
+{"behavior_label": 0, "case_id": "CASE-00092", "intent_annotation": "not_assessed", "rationale": "Out-of-scope destination", "scenario_id": "N02"}
+{"behavior_label": 1, "case_id": "CASE-00093", "intent_annotation": "simulated_suspicious", "rationale": "Correlated NTLM and Notice", "scenario_id": "P01"}
+{"behavior_label": 1, "case_id": "CASE-00094", "intent_annotation": "authorized", "rationale": "Authorized cross-boundary NTLM", "scenario_id": "P03"}
+{"behavior_label": 0, "case_id": "CASE-00095", "intent_annotation": "not_assessed", "rationale": "Reverse event chronology", "scenario_id": "N07"}
+{"behavior_label": 0, "case_id": "CASE-00096", "intent_annotation": "not_assessed", "rationale": "Correlation exceeds 300 seconds", "scenario_id": "N08"}
+{"behavior_label": 1, "case_id": "CASE-00097", "intent_annotation": "simulated_suspicious", "rationale": "Correlated NTLM without Notice", "scenario_id": "P02"}
+{"behavior_label": 0, "case_id": "CASE-00098", "intent_annotation": "not_assessed", "rationale": "Mismatched connection UIDs", "scenario_id": "N05"}
+{"behavior_label": 0, "case_id": "CASE-00099", "intent_annotation": "not_assessed", "rationale": "Mismatched connection UIDs", "scenario_id": "N05"}
+{"behavior_label": 1, "case_id": "CASE-00100", "intent_annotation": "authorized", "rationale": "Authorized cross-boundary NTLM", "scenario_id": "P03"}
+{"behavior_label": 0, "case_id": "CASE-00101", "intent_annotation": "not_assessed", "rationale": "NTLM without connection evidence", "scenario_id": "N04"}
+{"behavior_label": 0, "case_id": "CASE-00102", "intent_annotation": "not_assessed", "rationale": "Correlation exceeds 300 seconds", "scenario_id": "N08"}
+{"behavior_label": 1, "case_id": "CASE-00103", "intent_annotation": "authorized", "rationale": "Authorized cross-boundary NTLM", "scenario_id": "P03"}
+{"behavior_label": 0, "case_id": "CASE-00104", "intent_annotation": "not_assessed", "rationale": "Correlation exceeds 300 seconds", "scenario_id": "N08"}
+{"behavior_label": 0, "case_id": "CASE-00105", "intent_annotation": "not_assessed", "rationale": "Reverse event chronology", "scenario_id": "N07"}
+{"behavior_label": 0, "case_id": "CASE-00106", "intent_annotation": "not_assessed", "rationale": "NTLM without connection evidence", "scenario_id": "N04"}
+{"behavior_label": 0, "case_id": "CASE-00107", "intent_annotation": "not_assessed", "rationale": "Out-of-scope destination", "scenario_id": "N02"}
+{"behavior_label": 0, "case_id": "CASE-00108", "intent_annotation": "not_assessed", "rationale": "TCP connection only", "scenario_id": "N01"}
+{"behavior_label": 1, "case_id": "CASE-00109", "intent_annotation": "simulated_suspicious", "rationale": "Correlated NTLM without Notice", "scenario_id": "P02"}
+{"behavior_label": 0, "case_id": "CASE-00110", "intent_annotation": "not_assessed", "rationale": "Conflicting endpoint addresses", "scenario_id": "N06"}

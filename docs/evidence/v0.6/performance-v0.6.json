@@ -1,0 +1,158 @@
+{
+  "experiment": "v0.6_processing_performance",
+  "dataset_type": "deterministic_synthetic",
+  "seed": 20261009,
+  "python_version": "3.12.11",
+  "operating_system": "Windows",
+  "machine_architecture": "AMD64",
+  "trials_per_scale": 3,
+  "measurements": [
+    {
+      "repeats": 10,
+      "cases": 110,
+      "events": 210,
+      "expected_findings": 30,
+      "trials": [
+        {
+          "quality_ms": 3.6515,
+          "correlation_ms": 7.4496,
+          "detection_ms": 1.423,
+          "total_ms": 12.5241,
+          "throughput_events_per_second": 16767.672,
+          "traced_peak_mib": 0.183372,
+          "findings": 30
+        },
+        {
+          "quality_ms": 3.6812,
+          "correlation_ms": 7.2714,
+          "detection_ms": 1.4941,
+          "total_ms": 12.4467,
+          "throughput_events_per_second": 16871.942,
+          "traced_peak_mib": 0.183281,
+          "findings": 30
+        },
+        {
+          "quality_ms": 3.7837,
+          "correlation_ms": 7.5634,
+          "detection_ms": 1.4798,
+          "total_ms": 12.8269,
+          "throughput_events_per_second": 16371.844,
+          "traced_peak_mib": 0.183273,
+          "findings": 30
+        }
+      ],
+      "median": {
+        "quality_ms": 3.6812,
+        "correlation_ms": 7.4496,
+        "detection_ms": 1.4798,
+        "total_ms": 12.5241,
+        "throughput_events_per_second": 16767.672,
+        "traced_peak_mib": 0.183281
+      }
+    },
+    {
+      "repeats": 100,
+      "cases": 1100,
+      "events": 2100,
+      "expected_findings": 300,
+      "trials": [
+        {
+          "quality_ms": 38.3648,
+          "correlation_ms": 75.7871,
+          "detection_ms": 16.0098,
+          "total_ms": 130.1617,
+          "throughput_events_per_second": 16133.778,
+          "traced_peak_mib": 1.801329,
+          "findings": 300
+        },
+        {
+          "quality_ms": 38.9199,
+          "correlation_ms": 82.8143,
+          "detection_ms": 17.7125,
+          "total_ms": 139.4467,
+          "throughput_events_per_second": 15059.517,
+          "traced_peak_mib": 1.801329,
+          "findings": 300
+        },
+        {
+          "quality_ms": 38.9524,
+          "correlation_ms": 75.7249,
+          "detection_ms": 14.4825,
+          "total_ms": 129.1598,
+          "throughput_events_per_second": 16258.929,
+          "traced_peak_mib": 1.801329,
+          "findings": 300
+        }
+      ],
+      "median": {
+        "quality_ms": 38.9199,
+        "correlation_ms": 75.7871,
+        "detection_ms": 16.0098,
+        "total_ms": 130.1617,
+        "throughput_events_per_second": 16133.778,
+        "traced_peak_mib": 1.801329
+      }
+    },
+    {
+      "repeats": 500,
+      "cases": 5500,
+      "events": 10500,
+      "expected_findings": 1500,
+      "trials": [
+        {
+          "quality_ms": 199.9248,
+          "correlation_ms": 384.8094,
+          "detection_ms": 72.9117,
+          "total_ms": 657.6459,
+          "throughput_events_per_second": 15966.039,
+          "traced_peak_mib": 9.018272,
+          "findings": 1500
+        },
+        {
+          "quality_ms": 186.9085,
+          "correlation_ms": 370.3476,
+          "detection_ms": 72.6888,
+          "total_ms": 629.9449,
+          "throughput_events_per_second": 16668.124,
+          "traced_peak_mib": 9.018272,
+          "findings": 1500
+        },
+        {
+          "quality_ms": 190.2128,
+          "correlation_ms": 383.0944,
+          "detection_ms": 74.6363,
+          "total_ms": 647.9435,
+          "throughput_events_per_second": 16205.117,
+          "traced_peak_mib": 9.018272,
+          "findings": 1500
+        }
+      ],
+      "median": {
+        "quality_ms": 190.2128,
+        "correlation_ms": 383.0944,
+        "detection_ms": 72.9117,
+        "total_ms": 647.9435,
+        "throughput_events_per_second": 16205.117,
+        "traced_peak_mib": 9.018272
+      }
+    }
+  ],
+  "methodology": [
+    "Input generation excluded from measurement.",
+    "Quality, correlation and detection measured together.",
+    "Each trial is preceded by garbage collection.",
+    "Timing uses wall-clock perf_counter.",
+    "Reported aggregate values are medians.",
+    "tracemalloc tracks Python allocations made during processing.",
+    "Pre-existing input allocations are not included in the trace.",
+    "Timing includes tracemalloc instrumentation overhead.",
+    "All data and labels are synthetic."
+  ],
+  "limitations": [
+    "Not a production throughput benchmark.",
+    "No concurrent ingestion or disk I/O is measured.",
+    "No total-process RSS or system-wide memory is measured.",
+    "Results depend on hardware and runtime conditions.",
+    "Performance is not equivalent to detection accuracy."
+  ]
+}

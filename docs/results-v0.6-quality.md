@@ -1,4 +1,4 @@
-# V0.6 Experimental Results: Telemetry Quality, Detection Impact, and Endpoint Integrity
+# V0.6 Experimental Results: Telemetry Quality, Endpoint Integrity, and Processing Performance
 
 ## 1. Research objective
 
@@ -6,10 +6,11 @@ This study investigates how controlled quality defects in **normalized Zeek-styl
 
 1. Can a separate quality-assessment component identify observable record defects without silently changing detection inputs?
 2. How do missing or altered records and fields affect rule `R001_OUTBOUND_NTLM_TRUST_BOUNDARY`, and can an identified evidence-integrity failure be reproduced and corrected?
+3. How do processing time, throughput, and traced Python allocation peak change with the number of normalized events in a controlled, in-memory pipeline benchmark?
 
 **Interpretation boundary:** R001 reports observable outbound NTLM authentication across configured network boundaries that warrants investigation. A finding does **not** establish malicious intent, an Outlook-specific trigger, exploitation of CVE-2023-23397, or successful compromise.
 
-This report covers **quality and detection impact**, not processing-performance benchmarking. Throughput, latency distributions, and peak memory were not measured in V0.6 at the time of writing.
+This report covers **quality, detection impact, and an initial in-memory processing-performance benchmark**. The benchmark was measured after the endpoint-integrity correction; its measurements are not production throughput estimates or full-process memory measurements.
 
 ## 2. System and dataset
 
@@ -26,7 +27,8 @@ The evaluated pipeline consists of normalized-event quality assessment (`src/log
 | Protected network | `10.10.20.0/24` |
 | Untrusted network | `10.10.30.0/24` |
 | Correlation time limit | 300 seconds |
-| Current local regression result | 90 automated tests passed |
+| Current local regression result | 100 automated tests passed after adding the performance benchmark tests |
+| Published V0.6 quality-stage CI | GitHub Actions run #3: Python 3.11 and 3.12 on Ubuntu both passed (90 tests before the performance additions) |
 
 The 30 positive cases include **10 authorized-authentication cases**. The binary labels represent the dataset's predefined *observable behavior*, **not** a ground-truth classification of malicious activity. The versioned dataset and its SHA-256 manifest were not changed as part of these fault-injection experiments.
 
@@ -117,7 +119,7 @@ Four targeted regression tests were written before modifying the correlation log
 3. Removing a conflicting NTLM source IP must not turn a no-alert into an alert.
 4. Missing endpoint fields in an optional Notice must not alone suppress an otherwise supported alert.
 
-After adjusting the earlier quality-impact test to reflect the new evidence policy, the complete local test suite passed: **90 tests, 0 failures**. A successful GitHub-hosted CI run for these uncommitted V0.6 changes is **not claimed**.
+After adjusting the earlier quality-impact test to reflect the new evidence policy, the quality-stage local suite passed: **90 tests, 0 failures**. That quality-stage implementation and its four experimental archives were committed as `e94b1ad` and successfully tested in GitHub Actions run #3 on Ubuntu with Python 3.11 and 3.12. After adding ten performance-runner regression tests, the local suite passed **100 tests, 0 failures**. GitHub-hosted CI success for these *new performance additions* is **not yet claimed**.
 
 ## 6. Pre-fix versus post-fix comparison
 
@@ -159,7 +161,7 @@ The original pre-fix outputs cannot be regenerated from the corrected code alone
 | Positive, post-fix | `docs/evidence/v0.6/quality-impact-v0.6-post-fix.json` |
 | Negative, post-fix | `docs/evidence/v0.6/quality-negative-v0.6-post-fix.json` |
 
-These evidence files were copied from locally generated reports without modifying the originals. The raw dataset's integrity is checked by `scripts/benchmark_v04.py` against `datasets/synthetic/v0.4/manifest.json`. The evidence archive and V0.6 changes are pending a repository commit at the time this report was drafted; the table specifies their **intended repository paths**, not a claim that they are already published.
+These evidence files were copied from locally generated reports without modifying the originals. The raw dataset's integrity is checked by `scripts/benchmark_v04.py` against `datasets/synthetic/v0.4/manifest.json`. These four quality-impact evidence files and the corresponding quality-stage report were committed in `e94b1ad`. The separate performance evidence was archived after that commit; see Section 9 for its pending publication state.
 
 ## 8. Limitations and threats to validity
 
@@ -170,11 +172,81 @@ These evidence files were copied from locally generated reports without modifyin
 5. **Endpoint validation scope:** The endpoint-integrity correction requires non-empty strings for required records, while other IP validation concerns require separate tests and policies. This repair does not authenticate data provenance.
 6. **Time synchronization:** A syntactically valid timestamp may be inaccurate. The N08 result illustrates that time skew can change rule matching without triggering the field-quality checker.
 7. **Experimental unit:** Case-condition results are repeated interventions on the same underlying fixed scenarios, not independent samples from a population. No inferential confidence intervals or generalization claims are made.
-8. **Performance not yet evaluated:** No processing-time, throughput, CPU, or peak-memory benchmark has been conducted for V0.6. Those results must be collected, with environment and measurement methodology recorded, before any scalability claim.
-9. **Validation status:** The 90-test pass is a locally observed result. Cross-platform CI validation for the V0.6 changes must be checked after they are committed and pushed.
+8. **Performance scope:** An in-memory wall-clock and Python-allocation benchmark was measured for three synthetic input sizes, but CPU utilization, disk ingestion, total-process RSS, production log streams, concurrency, and cold-start effects were not evaluated. Three trials at each size do not establish hardware-independent capacity or production scalability.
+9. **Validation status:** The quality-stage commit `e94b1ad` passed Ubuntu Python 3.11 and 3.12 CI. The local suite subsequently reached 100 passing tests after performance additions, but the new performance code and expanded report require a new CI run after publication.
 
-## 9. Conclusions and next steps
+## 9. Processing-performance evaluation
 
-The experiments show that the existing quality audit can detect several record-level faults and that different telemetry failures affect R001 in materially different ways. A specific missing-endpoint defect was identified using 10 `N06` negative cases, reproduced by failing regression tests, corrected with a stricter evidence-sufficiency rule, and verified through passing tests and a matched before/after experiment. The intervention eliminated the 10 observed N06 induced alerts while leaving clean positive-case detection unchanged. The corresponding loss of alerts in incomplete positive cases is an explicit trade-off, not a hidden success metric.
+### 9.1 Measurement question and scope
 
-Recommended follow-up work is to (a) test fault effects across more varied benign and authorized scenarios; (b) align evidence-quality reporting with the stricter endpoint policy; (c) isolate malformed records during batch processing where appropriate; and (d) run a separately documented processing-performance benchmark across dataset sizes. All claims should continue to distinguish observed behavior, incomplete evidence, processing failure, and malicious intent.
+The performance experiment investigates whether the *in-memory, sequential* processing time and traced Python memory allocations change predictably as the synthetic dataset scales. The measured pipeline runs three stages in order: normalized-event quality assessment, UID-based event correlation, and R001 detection. The event generator runs **outside** the measured interval. The benchmark does **not** time file loading, Zeek parsing, data generation, network ingestion, or JSON report serialization.
+
+The benchmark script is `scripts/performance_v06.py`, and its measured output is archived in `docs/evidence/v0.6/performance-v0.6.json` (pending the next performance-stage commit). The test runner uses the deterministic `generate(repeats, seed)` function, protected network `10.10.20.0/24`, untrusted network `10.10.30.0/24`, and seed `20261009`.
+
+### 9.2 Measurement environment and procedure
+
+| Parameter | Observed value or procedure |
+| --- | --- |
+| Operating system | Windows (build and hardware details not independently recorded in this report) |
+| Python runtime | CPython 3.12.11 |
+| Data source | Deterministic synthetic normalized events, generated in memory |
+| Scenario scales | `repeats=10`, `100`, `500` |
+| Event counts | 210, 2,100, 10,500 |
+| Case counts | 110, 1,100, 5,500 |
+| Expected R001 findings | 30, 300, 1,500 |
+| Trials | Three sequential trials per scale |
+| Timer | `time.perf_counter()`; quality, correlation, and detection timings recorded separately |
+| Memory metric | `tracemalloc` traced Python allocation peak during measured processing; input constructed before tracing |
+| Other controls | `gc.collect()` before each trial; verifies quality issue count, event count, and R001 finding count |
+| Aggregation | Median of the three recorded values for each metric |
+
+`tracemalloc` was enabled **during timing**; its instrumentation overhead is part of the reported elapsed time. The traced peak is **not** the system resident set size (RSS), total process memory, or a peak over the full data-generation and processing lifecycle. No uninstrumented timing comparison or explicit warm-up protocol was included. Stage medians are computed independently and need not sum exactly to the median total.
+
+### 9.3 Observed results
+
+These values were copied from the user-executed `results/performance-v0.6.json` benchmark summary and breakdown. Timing and memory are measured values, not estimates.
+
+| Events | Total elapsed median (ms) | Throughput median (events/s) | Traced allocation peak median (MiB) |
+| ---: | ---: | ---: | ---: |
+| 210 | 12.5241 | 16,767.672 | 0.183281 |
+| 2,100 | 130.1617 | 16,133.778 | 1.801329 |
+| 10,500 | 647.9435 | 16,205.117 | 9.018272 |
+
+| Events | Quality median (ms) | Correlation median (ms) | Detection median (ms) | Min total across trials (ms) | Max total across trials (ms) |
+| ---: | ---: | ---: | ---: | ---: | ---: |
+| 210 | 3.681 | 7.450 | 1.480 | 12.447 | 12.827 |
+| 2,100 | 38.920 | 75.787 | 16.010 | 129.160 | 139.447 |
+| 10,500 | 190.213 | 383.094 | 72.912 | 629.945 | 657.646 |
+
+At 10,500 events, correlation accounted for approximately **59.1%** of the median total elapsed time (`383.094 / 647.9435`); quality assessment accounted for approximately **29.4%**, and R001 detection for **11.3%**. These are descriptive ratios of independently aggregated medians, not per-trial attribution. Correlation is the largest measured stage in all three scales and the best candidate for targeted profiling before any algorithm changes.
+
+Increasing the input from 210 to 10,500 events multiplies event count by 50 and median total elapsed time by approximately **51.7**; traced Python allocation peaks also increase by about 49.2 times. Throughput stays around **16,100–16,800 events/s** over these measured sizes. These three observations are **consistent with approximately linear scaling within this narrow experimental range**, not proof of asymptotic complexity or general scalability. The number of cases, UID groups, and findings also grows with event count in this generator, so a different event distribution may yield different performance.
+
+### 9.4 Reproduction and integrity
+
+Run from the repository root:
+
+```powershell
+python .\scripts\performance_v06.py --scales 10 100 500 --trials 3 --seed 20261009 --output .\results\performance-v0.6.json
+python -m unittest discover -s tests -q
+```
+
+The archived evidence path is `docs/evidence/v0.6/performance-v0.6.json`. Before preparing this report update, the original and archived file were checked byte-for-byte with SHA-256 and matched:
+
+```text
+02A8DF2366EF3AA5647A00C087BC44F2D3634F86022745D9E4E339041450D10E
+```
+
+The V0.6 quality-stage GitHub CI verified **90 tests** at commit `e94b1ad`, while the local test suite later passed **100 tests** after the addition of `tests/test_performance_v06.py`. The performance additions and revised report still require a new GitHub CI run. Performance values are environment-dependent: reproducing the *method* is expected; exact timing and peak-allocation values are not guaranteed on a different machine.
+
+### 9.5 Threats to validity and next measurements
+
+The benchmark uses only synthetic normalized events in a single Python process, and it excludes parsing/serialization, disk I/O, network ingest, concurrency, backpressure, end-to-end latency, and operating-system process RSS. With three trials per scale, results support a descriptive baseline rather than uncertainty bounds or production capacity claims. Priority next steps are (a) profile the correlation stage; (b) measure uninstrumented wall-clock time alongside RSS; (c) test larger scales and varied UID/event distributions; and (d) test end-to-end parsing and ingestion, with controlled hardware and runtime metadata.
+
+## 10. Conclusions and next steps
+
+The V0.6 experiments show that the quality audit detects several record-level faults and that telemetry degradation affects R001 in different ways. Ten `N06` negative cases exposed an endpoint-integrity defect, reproduced through failing tests and resolved by requiring non-empty endpoints in the required connection and NTLM records. The repair eliminated the 10 observed induced N06 alerts while leaving detection on clean positive examples unchanged; it also suppressed alerts when required NTLM source evidence was absent in 30 positive cases. This is an explicit evidence-sufficiency trade-off, not an unconditional accuracy gain.
+
+The performance baseline measured 210–10,500 in-memory synthetic events on Windows with Python 3.12.11. The largest input completed in a **647.9435 ms median** with a **16,205.117 events/s median** and a **9.018272 MiB median traced Python allocation peak**. Correlation was the largest time component. The results do not establish production throughput, performance with real enterprise logs, or full-process memory usage.
+
+The quality-stage code, 90-test suite, and four pre-/post-fix evidence files were published in commit `e94b1ad` with successful Ubuntu Python 3.11/3.12 CI. The performance benchmark, its ten new tests (bringing the local total to 100), archived performance output, and this expanded report are prepared for the next commit and CI validation. Further research should strengthen collection-coverage checks, timestamp reliability, endpoint validity, performance instrumentation, and realistic log diversity without conflating incomplete telemetry with malicious intent.

@@ -1,0 +1,3058 @@
+{
+  "experiment": "v0.6_quality_impact",
+  "dataset_type": "synthetic",
+  "original_positive_cases": 30,
+  "conditions": [
+    "original",
+    "duplicate_ntlm",
+    "missing_ntlm_uid",
+    "missing_ntlm_source_ip",
+    "invalid_ntlm_source_ip",
+    "invalid_ntlm_timestamp",
+    "drop_ntlm",
+    "timestamp_skew_back_60s"
+  ],
+  "total_case_condition_runs": 240,
+  "summary": {
+    "original": {
+      "cases": 30,
+      "quality_flagged_cases": 0,
+      "r001_alerts": 30,
+      "no_r001_alert": 0,
+      "processing_errors": 0,
+      "alert_fraction_of_all_cases": 1.0,
+      "alert_fraction_of_processed_cases": 1.0,
+      "issue_counts": {}
+    },
+    "duplicate_ntlm": {
+      "cases": 30,
+      "quality_flagged_cases": 30,
+      "r001_alerts": 30,
+      "no_r001_alert": 0,
+      "processing_errors": 0,
+      "alert_fraction_of_all_cases": 1.0,
+      "alert_fraction_of_processed_cases": 1.0,
+      "issue_counts": {
+        "duplicate_event_id": 30
+      }
+    },
+    "missing_ntlm_uid": {
+      "cases": 30,
+      "quality_flagged_cases": 30,
+      "r001_alerts": 0,
+      "no_r001_alert": 30,
+      "processing_errors": 0,
+      "alert_fraction_of_all_cases": 0.0,
+      "alert_fraction_of_processed_cases": 0.0,
+      "issue_counts": {
+        "missing_uid": 30
+      }
+    },
+    "missing_ntlm_source_ip": {
+      "cases": 30,
+      "quality_flagged_cases": 30,
+      "r001_alerts": 30,
+      "no_r001_alert": 0,
+      "processing_errors": 0,
+      "alert_fraction_of_all_cases": 1.0,
+      "alert_fraction_of_processed_cases": 1.0,
+      "issue_counts": {
+        "missing_source_ip": 30
+      }
+    },
+    "invalid_ntlm_source_ip": {
+      "cases": 30,
+      "quality_flagged_cases": 30,
+      "r001_alerts": 0,
+      "no_r001_alert": 30,
+      "processing_errors": 0,
+      "alert_fraction_of_all_cases": 0.0,
+      "alert_fraction_of_processed_cases": 0.0,
+      "issue_counts": {
+        "invalid_source_ip": 30
+      }
+    },
+    "invalid_ntlm_timestamp": {
+      "cases": 30,
+      "quality_flagged_cases": 30,
+      "r001_alerts": 0,
+      "no_r001_alert": 0,
+      "processing_errors": 30,
+      "alert_fraction_of_all_cases": 0.0,
+      "alert_fraction_of_processed_cases": null,
+      "issue_counts": {
+        "invalid_timestamp": 30
+      }
+    },
+    "drop_ntlm": {
+      "cases": 30,
+      "quality_flagged_cases": 0,
+      "r001_alerts": 0,
+      "no_r001_alert": 30,
+      "processing_errors": 0,
+      "alert_fraction_of_all_cases": 0.0,
+      "alert_fraction_of_processed_cases": 0.0,
+      "issue_counts": {}
+    },
+    "timestamp_skew_back_60s": {
+      "cases": 30,
+      "quality_flagged_cases": 0,
+      "r001_alerts": 0,
+      "no_r001_alert": 30,
+      "processing_errors": 0,
+      "alert_fraction_of_all_cases": 0.0,
+      "alert_fraction_of_processed_cases": 0.0,
+      "issue_counts": {}
+    }
+  },
+  "case_results": [
+    {
+      "case_id": "CASE-00002",
+      "scenario_id": "P03",
+      "condition": "original",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 2,
+      "quality_issues": {},
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00003",
+      "scenario_id": "P02",
+      "condition": "original",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 2,
+      "quality_issues": {},
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00010",
+      "scenario_id": "P01",
+      "condition": "original",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 3,
+      "quality_issues": {},
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00018",
+      "scenario_id": "P03",
+      "condition": "original",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 2,
+      "quality_issues": {},
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00019",
+      "scenario_id": "P03",
+      "condition": "original",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 2,
+      "quality_issues": {},
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00026",
+      "scenario_id": "P03",
+      "condition": "original",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 2,
+      "quality_issues": {},
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00029",
+      "scenario_id": "P02",
+      "condition": "original",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 2,
+      "quality_issues": {},
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00030",
+      "scenario_id": "P01",
+      "condition": "original",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 3,
+      "quality_issues": {},
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00036",
+      "scenario_id": "P02",
+      "condition": "original",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 2,
+      "quality_issues": {},
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00037",
+      "scenario_id": "P01",
+      "condition": "original",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 3,
+      "quality_issues": {},
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00038",
+      "scenario_id": "P01",
+      "condition": "original",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 3,
+      "quality_issues": {},
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00040",
+      "scenario_id": "P02",
+      "condition": "original",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 2,
+      "quality_issues": {},
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00044",
+      "scenario_id": "P02",
+      "condition": "original",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 2,
+      "quality_issues": {},
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00046",
+      "scenario_id": "P01",
+      "condition": "original",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 3,
+      "quality_issues": {},
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00058",
+      "scenario_id": "P01",
+      "condition": "original",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 3,
+      "quality_issues": {},
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00063",
+      "scenario_id": "P02",
+      "condition": "original",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 2,
+      "quality_issues": {},
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00065",
+      "scenario_id": "P01",
+      "condition": "original",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 3,
+      "quality_issues": {},
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00070",
+      "scenario_id": "P03",
+      "condition": "original",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 2,
+      "quality_issues": {},
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00073",
+      "scenario_id": "P03",
+      "condition": "original",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 2,
+      "quality_issues": {},
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00074",
+      "scenario_id": "P02",
+      "condition": "original",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 2,
+      "quality_issues": {},
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00078",
+      "scenario_id": "P01",
+      "condition": "original",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 3,
+      "quality_issues": {},
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00079",
+      "scenario_id": "P03",
+      "condition": "original",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 2,
+      "quality_issues": {},
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00083",
+      "scenario_id": "P02",
+      "condition": "original",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 2,
+      "quality_issues": {},
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00089",
+      "scenario_id": "P01",
+      "condition": "original",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 3,
+      "quality_issues": {},
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00093",
+      "scenario_id": "P01",
+      "condition": "original",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 3,
+      "quality_issues": {},
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00094",
+      "scenario_id": "P03",
+      "condition": "original",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 2,
+      "quality_issues": {},
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00097",
+      "scenario_id": "P02",
+      "condition": "original",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 2,
+      "quality_issues": {},
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00100",
+      "scenario_id": "P03",
+      "condition": "original",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 2,
+      "quality_issues": {},
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00103",
+      "scenario_id": "P03",
+      "condition": "original",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 2,
+      "quality_issues": {},
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00109",
+      "scenario_id": "P02",
+      "condition": "original",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 2,
+      "quality_issues": {},
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00002",
+      "scenario_id": "P03",
+      "condition": "duplicate_ntlm",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 3,
+      "quality_issues": {
+        "duplicate_event_id": 1
+      },
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00003",
+      "scenario_id": "P02",
+      "condition": "duplicate_ntlm",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 3,
+      "quality_issues": {
+        "duplicate_event_id": 1
+      },
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00010",
+      "scenario_id": "P01",
+      "condition": "duplicate_ntlm",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 4,
+      "quality_issues": {
+        "duplicate_event_id": 1
+      },
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00018",
+      "scenario_id": "P03",
+      "condition": "duplicate_ntlm",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 3,
+      "quality_issues": {
+        "duplicate_event_id": 1
+      },
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00019",
+      "scenario_id": "P03",
+      "condition": "duplicate_ntlm",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 3,
+      "quality_issues": {
+        "duplicate_event_id": 1
+      },
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00026",
+      "scenario_id": "P03",
+      "condition": "duplicate_ntlm",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 3,
+      "quality_issues": {
+        "duplicate_event_id": 1
+      },
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00029",
+      "scenario_id": "P02",
+      "condition": "duplicate_ntlm",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 3,
+      "quality_issues": {
+        "duplicate_event_id": 1
+      },
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00030",
+      "scenario_id": "P01",
+      "condition": "duplicate_ntlm",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 4,
+      "quality_issues": {
+        "duplicate_event_id": 1
+      },
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00036",
+      "scenario_id": "P02",
+      "condition": "duplicate_ntlm",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 3,
+      "quality_issues": {
+        "duplicate_event_id": 1
+      },
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00037",
+      "scenario_id": "P01",
+      "condition": "duplicate_ntlm",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 4,
+      "quality_issues": {
+        "duplicate_event_id": 1
+      },
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00038",
+      "scenario_id": "P01",
+      "condition": "duplicate_ntlm",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 4,
+      "quality_issues": {
+        "duplicate_event_id": 1
+      },
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00040",
+      "scenario_id": "P02",
+      "condition": "duplicate_ntlm",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 3,
+      "quality_issues": {
+        "duplicate_event_id": 1
+      },
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00044",
+      "scenario_id": "P02",
+      "condition": "duplicate_ntlm",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 3,
+      "quality_issues": {
+        "duplicate_event_id": 1
+      },
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00046",
+      "scenario_id": "P01",
+      "condition": "duplicate_ntlm",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 4,
+      "quality_issues": {
+        "duplicate_event_id": 1
+      },
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00058",
+      "scenario_id": "P01",
+      "condition": "duplicate_ntlm",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 4,
+      "quality_issues": {
+        "duplicate_event_id": 1
+      },
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00063",
+      "scenario_id": "P02",
+      "condition": "duplicate_ntlm",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 3,
+      "quality_issues": {
+        "duplicate_event_id": 1
+      },
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00065",
+      "scenario_id": "P01",
+      "condition": "duplicate_ntlm",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 4,
+      "quality_issues": {
+        "duplicate_event_id": 1
+      },
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00070",
+      "scenario_id": "P03",
+      "condition": "duplicate_ntlm",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 3,
+      "quality_issues": {
+        "duplicate_event_id": 1
+      },
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00073",
+      "scenario_id": "P03",
+      "condition": "duplicate_ntlm",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 3,
+      "quality_issues": {
+        "duplicate_event_id": 1
+      },
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00074",
+      "scenario_id": "P02",
+      "condition": "duplicate_ntlm",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 3,
+      "quality_issues": {
+        "duplicate_event_id": 1
+      },
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00078",
+      "scenario_id": "P01",
+      "condition": "duplicate_ntlm",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 4,
+      "quality_issues": {
+        "duplicate_event_id": 1
+      },
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00079",
+      "scenario_id": "P03",
+      "condition": "duplicate_ntlm",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 3,
+      "quality_issues": {
+        "duplicate_event_id": 1
+      },
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00083",
+      "scenario_id": "P02",
+      "condition": "duplicate_ntlm",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 3,
+      "quality_issues": {
+        "duplicate_event_id": 1
+      },
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00089",
+      "scenario_id": "P01",
+      "condition": "duplicate_ntlm",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 4,
+      "quality_issues": {
+        "duplicate_event_id": 1
+      },
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00093",
+      "scenario_id": "P01",
+      "condition": "duplicate_ntlm",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 4,
+      "quality_issues": {
+        "duplicate_event_id": 1
+      },
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00094",
+      "scenario_id": "P03",
+      "condition": "duplicate_ntlm",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 3,
+      "quality_issues": {
+        "duplicate_event_id": 1
+      },
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00097",
+      "scenario_id": "P02",
+      "condition": "duplicate_ntlm",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 3,
+      "quality_issues": {
+        "duplicate_event_id": 1
+      },
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00100",
+      "scenario_id": "P03",
+      "condition": "duplicate_ntlm",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 3,
+      "quality_issues": {
+        "duplicate_event_id": 1
+      },
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00103",
+      "scenario_id": "P03",
+      "condition": "duplicate_ntlm",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 3,
+      "quality_issues": {
+        "duplicate_event_id": 1
+      },
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00109",
+      "scenario_id": "P02",
+      "condition": "duplicate_ntlm",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 3,
+      "quality_issues": {
+        "duplicate_event_id": 1
+      },
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00002",
+      "scenario_id": "P03",
+      "condition": "missing_ntlm_uid",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "missing_uid": 1
+      },
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00003",
+      "scenario_id": "P02",
+      "condition": "missing_ntlm_uid",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "missing_uid": 1
+      },
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00010",
+      "scenario_id": "P01",
+      "condition": "missing_ntlm_uid",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 3,
+      "quality_issues": {
+        "missing_uid": 1
+      },
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00018",
+      "scenario_id": "P03",
+      "condition": "missing_ntlm_uid",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "missing_uid": 1
+      },
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00019",
+      "scenario_id": "P03",
+      "condition": "missing_ntlm_uid",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "missing_uid": 1
+      },
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00026",
+      "scenario_id": "P03",
+      "condition": "missing_ntlm_uid",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "missing_uid": 1
+      },
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00029",
+      "scenario_id": "P02",
+      "condition": "missing_ntlm_uid",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "missing_uid": 1
+      },
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00030",
+      "scenario_id": "P01",
+      "condition": "missing_ntlm_uid",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 3,
+      "quality_issues": {
+        "missing_uid": 1
+      },
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00036",
+      "scenario_id": "P02",
+      "condition": "missing_ntlm_uid",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "missing_uid": 1
+      },
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00037",
+      "scenario_id": "P01",
+      "condition": "missing_ntlm_uid",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 3,
+      "quality_issues": {
+        "missing_uid": 1
+      },
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00038",
+      "scenario_id": "P01",
+      "condition": "missing_ntlm_uid",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 3,
+      "quality_issues": {
+        "missing_uid": 1
+      },
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00040",
+      "scenario_id": "P02",
+      "condition": "missing_ntlm_uid",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "missing_uid": 1
+      },
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00044",
+      "scenario_id": "P02",
+      "condition": "missing_ntlm_uid",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "missing_uid": 1
+      },
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00046",
+      "scenario_id": "P01",
+      "condition": "missing_ntlm_uid",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 3,
+      "quality_issues": {
+        "missing_uid": 1
+      },
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00058",
+      "scenario_id": "P01",
+      "condition": "missing_ntlm_uid",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 3,
+      "quality_issues": {
+        "missing_uid": 1
+      },
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00063",
+      "scenario_id": "P02",
+      "condition": "missing_ntlm_uid",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "missing_uid": 1
+      },
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00065",
+      "scenario_id": "P01",
+      "condition": "missing_ntlm_uid",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 3,
+      "quality_issues": {
+        "missing_uid": 1
+      },
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00070",
+      "scenario_id": "P03",
+      "condition": "missing_ntlm_uid",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "missing_uid": 1
+      },
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00073",
+      "scenario_id": "P03",
+      "condition": "missing_ntlm_uid",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "missing_uid": 1
+      },
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00074",
+      "scenario_id": "P02",
+      "condition": "missing_ntlm_uid",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "missing_uid": 1
+      },
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00078",
+      "scenario_id": "P01",
+      "condition": "missing_ntlm_uid",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 3,
+      "quality_issues": {
+        "missing_uid": 1
+      },
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00079",
+      "scenario_id": "P03",
+      "condition": "missing_ntlm_uid",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "missing_uid": 1
+      },
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00083",
+      "scenario_id": "P02",
+      "condition": "missing_ntlm_uid",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "missing_uid": 1
+      },
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00089",
+      "scenario_id": "P01",
+      "condition": "missing_ntlm_uid",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 3,
+      "quality_issues": {
+        "missing_uid": 1
+      },
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00093",
+      "scenario_id": "P01",
+      "condition": "missing_ntlm_uid",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 3,
+      "quality_issues": {
+        "missing_uid": 1
+      },
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00094",
+      "scenario_id": "P03",
+      "condition": "missing_ntlm_uid",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "missing_uid": 1
+      },
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00097",
+      "scenario_id": "P02",
+      "condition": "missing_ntlm_uid",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "missing_uid": 1
+      },
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00100",
+      "scenario_id": "P03",
+      "condition": "missing_ntlm_uid",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "missing_uid": 1
+      },
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00103",
+      "scenario_id": "P03",
+      "condition": "missing_ntlm_uid",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "missing_uid": 1
+      },
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00109",
+      "scenario_id": "P02",
+      "condition": "missing_ntlm_uid",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "missing_uid": 1
+      },
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00002",
+      "scenario_id": "P03",
+      "condition": "missing_ntlm_source_ip",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "missing_source_ip": 1
+      },
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00003",
+      "scenario_id": "P02",
+      "condition": "missing_ntlm_source_ip",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "missing_source_ip": 1
+      },
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00010",
+      "scenario_id": "P01",
+      "condition": "missing_ntlm_source_ip",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 3,
+      "quality_issues": {
+        "missing_source_ip": 1
+      },
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00018",
+      "scenario_id": "P03",
+      "condition": "missing_ntlm_source_ip",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "missing_source_ip": 1
+      },
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00019",
+      "scenario_id": "P03",
+      "condition": "missing_ntlm_source_ip",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "missing_source_ip": 1
+      },
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00026",
+      "scenario_id": "P03",
+      "condition": "missing_ntlm_source_ip",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "missing_source_ip": 1
+      },
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00029",
+      "scenario_id": "P02",
+      "condition": "missing_ntlm_source_ip",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "missing_source_ip": 1
+      },
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00030",
+      "scenario_id": "P01",
+      "condition": "missing_ntlm_source_ip",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 3,
+      "quality_issues": {
+        "missing_source_ip": 1
+      },
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00036",
+      "scenario_id": "P02",
+      "condition": "missing_ntlm_source_ip",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "missing_source_ip": 1
+      },
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00037",
+      "scenario_id": "P01",
+      "condition": "missing_ntlm_source_ip",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 3,
+      "quality_issues": {
+        "missing_source_ip": 1
+      },
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00038",
+      "scenario_id": "P01",
+      "condition": "missing_ntlm_source_ip",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 3,
+      "quality_issues": {
+        "missing_source_ip": 1
+      },
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00040",
+      "scenario_id": "P02",
+      "condition": "missing_ntlm_source_ip",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "missing_source_ip": 1
+      },
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00044",
+      "scenario_id": "P02",
+      "condition": "missing_ntlm_source_ip",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "missing_source_ip": 1
+      },
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00046",
+      "scenario_id": "P01",
+      "condition": "missing_ntlm_source_ip",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 3,
+      "quality_issues": {
+        "missing_source_ip": 1
+      },
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00058",
+      "scenario_id": "P01",
+      "condition": "missing_ntlm_source_ip",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 3,
+      "quality_issues": {
+        "missing_source_ip": 1
+      },
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00063",
+      "scenario_id": "P02",
+      "condition": "missing_ntlm_source_ip",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "missing_source_ip": 1
+      },
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00065",
+      "scenario_id": "P01",
+      "condition": "missing_ntlm_source_ip",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 3,
+      "quality_issues": {
+        "missing_source_ip": 1
+      },
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00070",
+      "scenario_id": "P03",
+      "condition": "missing_ntlm_source_ip",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "missing_source_ip": 1
+      },
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00073",
+      "scenario_id": "P03",
+      "condition": "missing_ntlm_source_ip",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "missing_source_ip": 1
+      },
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00074",
+      "scenario_id": "P02",
+      "condition": "missing_ntlm_source_ip",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "missing_source_ip": 1
+      },
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00078",
+      "scenario_id": "P01",
+      "condition": "missing_ntlm_source_ip",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 3,
+      "quality_issues": {
+        "missing_source_ip": 1
+      },
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00079",
+      "scenario_id": "P03",
+      "condition": "missing_ntlm_source_ip",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "missing_source_ip": 1
+      },
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00083",
+      "scenario_id": "P02",
+      "condition": "missing_ntlm_source_ip",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "missing_source_ip": 1
+      },
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00089",
+      "scenario_id": "P01",
+      "condition": "missing_ntlm_source_ip",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 3,
+      "quality_issues": {
+        "missing_source_ip": 1
+      },
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00093",
+      "scenario_id": "P01",
+      "condition": "missing_ntlm_source_ip",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 3,
+      "quality_issues": {
+        "missing_source_ip": 1
+      },
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00094",
+      "scenario_id": "P03",
+      "condition": "missing_ntlm_source_ip",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "missing_source_ip": 1
+      },
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00097",
+      "scenario_id": "P02",
+      "condition": "missing_ntlm_source_ip",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "missing_source_ip": 1
+      },
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00100",
+      "scenario_id": "P03",
+      "condition": "missing_ntlm_source_ip",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "missing_source_ip": 1
+      },
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00103",
+      "scenario_id": "P03",
+      "condition": "missing_ntlm_source_ip",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "missing_source_ip": 1
+      },
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00109",
+      "scenario_id": "P02",
+      "condition": "missing_ntlm_source_ip",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "missing_source_ip": 1
+      },
+      "r001_alert": true,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00002",
+      "scenario_id": "P03",
+      "condition": "invalid_ntlm_source_ip",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "invalid_source_ip": 1
+      },
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00003",
+      "scenario_id": "P02",
+      "condition": "invalid_ntlm_source_ip",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "invalid_source_ip": 1
+      },
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00010",
+      "scenario_id": "P01",
+      "condition": "invalid_ntlm_source_ip",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 3,
+      "quality_issues": {
+        "invalid_source_ip": 1
+      },
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00018",
+      "scenario_id": "P03",
+      "condition": "invalid_ntlm_source_ip",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "invalid_source_ip": 1
+      },
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00019",
+      "scenario_id": "P03",
+      "condition": "invalid_ntlm_source_ip",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "invalid_source_ip": 1
+      },
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00026",
+      "scenario_id": "P03",
+      "condition": "invalid_ntlm_source_ip",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "invalid_source_ip": 1
+      },
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00029",
+      "scenario_id": "P02",
+      "condition": "invalid_ntlm_source_ip",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "invalid_source_ip": 1
+      },
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00030",
+      "scenario_id": "P01",
+      "condition": "invalid_ntlm_source_ip",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 3,
+      "quality_issues": {
+        "invalid_source_ip": 1
+      },
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00036",
+      "scenario_id": "P02",
+      "condition": "invalid_ntlm_source_ip",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "invalid_source_ip": 1
+      },
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00037",
+      "scenario_id": "P01",
+      "condition": "invalid_ntlm_source_ip",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 3,
+      "quality_issues": {
+        "invalid_source_ip": 1
+      },
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00038",
+      "scenario_id": "P01",
+      "condition": "invalid_ntlm_source_ip",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 3,
+      "quality_issues": {
+        "invalid_source_ip": 1
+      },
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00040",
+      "scenario_id": "P02",
+      "condition": "invalid_ntlm_source_ip",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "invalid_source_ip": 1
+      },
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00044",
+      "scenario_id": "P02",
+      "condition": "invalid_ntlm_source_ip",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "invalid_source_ip": 1
+      },
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00046",
+      "scenario_id": "P01",
+      "condition": "invalid_ntlm_source_ip",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 3,
+      "quality_issues": {
+        "invalid_source_ip": 1
+      },
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00058",
+      "scenario_id": "P01",
+      "condition": "invalid_ntlm_source_ip",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 3,
+      "quality_issues": {
+        "invalid_source_ip": 1
+      },
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00063",
+      "scenario_id": "P02",
+      "condition": "invalid_ntlm_source_ip",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "invalid_source_ip": 1
+      },
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00065",
+      "scenario_id": "P01",
+      "condition": "invalid_ntlm_source_ip",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 3,
+      "quality_issues": {
+        "invalid_source_ip": 1
+      },
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00070",
+      "scenario_id": "P03",
+      "condition": "invalid_ntlm_source_ip",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "invalid_source_ip": 1
+      },
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00073",
+      "scenario_id": "P03",
+      "condition": "invalid_ntlm_source_ip",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "invalid_source_ip": 1
+      },
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00074",
+      "scenario_id": "P02",
+      "condition": "invalid_ntlm_source_ip",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "invalid_source_ip": 1
+      },
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00078",
+      "scenario_id": "P01",
+      "condition": "invalid_ntlm_source_ip",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 3,
+      "quality_issues": {
+        "invalid_source_ip": 1
+      },
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00079",
+      "scenario_id": "P03",
+      "condition": "invalid_ntlm_source_ip",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "invalid_source_ip": 1
+      },
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00083",
+      "scenario_id": "P02",
+      "condition": "invalid_ntlm_source_ip",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "invalid_source_ip": 1
+      },
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00089",
+      "scenario_id": "P01",
+      "condition": "invalid_ntlm_source_ip",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 3,
+      "quality_issues": {
+        "invalid_source_ip": 1
+      },
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00093",
+      "scenario_id": "P01",
+      "condition": "invalid_ntlm_source_ip",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 3,
+      "quality_issues": {
+        "invalid_source_ip": 1
+      },
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00094",
+      "scenario_id": "P03",
+      "condition": "invalid_ntlm_source_ip",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "invalid_source_ip": 1
+      },
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00097",
+      "scenario_id": "P02",
+      "condition": "invalid_ntlm_source_ip",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "invalid_source_ip": 1
+      },
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00100",
+      "scenario_id": "P03",
+      "condition": "invalid_ntlm_source_ip",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "invalid_source_ip": 1
+      },
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00103",
+      "scenario_id": "P03",
+      "condition": "invalid_ntlm_source_ip",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "invalid_source_ip": 1
+      },
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00109",
+      "scenario_id": "P02",
+      "condition": "invalid_ntlm_source_ip",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "invalid_source_ip": 1
+      },
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00002",
+      "scenario_id": "P03",
+      "condition": "invalid_ntlm_timestamp",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "invalid_timestamp": 1
+      },
+      "r001_alert": null,
+      "processing_error": "ValueError: Invalid isoformat string: 'invalid-timestamp'"
+    },
+    {
+      "case_id": "CASE-00003",
+      "scenario_id": "P02",
+      "condition": "invalid_ntlm_timestamp",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "invalid_timestamp": 1
+      },
+      "r001_alert": null,
+      "processing_error": "ValueError: Invalid isoformat string: 'invalid-timestamp'"
+    },
+    {
+      "case_id": "CASE-00010",
+      "scenario_id": "P01",
+      "condition": "invalid_ntlm_timestamp",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 3,
+      "quality_issues": {
+        "invalid_timestamp": 1
+      },
+      "r001_alert": null,
+      "processing_error": "ValueError: Invalid isoformat string: 'invalid-timestamp'"
+    },
+    {
+      "case_id": "CASE-00018",
+      "scenario_id": "P03",
+      "condition": "invalid_ntlm_timestamp",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "invalid_timestamp": 1
+      },
+      "r001_alert": null,
+      "processing_error": "ValueError: Invalid isoformat string: 'invalid-timestamp'"
+    },
+    {
+      "case_id": "CASE-00019",
+      "scenario_id": "P03",
+      "condition": "invalid_ntlm_timestamp",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "invalid_timestamp": 1
+      },
+      "r001_alert": null,
+      "processing_error": "ValueError: Invalid isoformat string: 'invalid-timestamp'"
+    },
+    {
+      "case_id": "CASE-00026",
+      "scenario_id": "P03",
+      "condition": "invalid_ntlm_timestamp",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "invalid_timestamp": 1
+      },
+      "r001_alert": null,
+      "processing_error": "ValueError: Invalid isoformat string: 'invalid-timestamp'"
+    },
+    {
+      "case_id": "CASE-00029",
+      "scenario_id": "P02",
+      "condition": "invalid_ntlm_timestamp",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "invalid_timestamp": 1
+      },
+      "r001_alert": null,
+      "processing_error": "ValueError: Invalid isoformat string: 'invalid-timestamp'"
+    },
+    {
+      "case_id": "CASE-00030",
+      "scenario_id": "P01",
+      "condition": "invalid_ntlm_timestamp",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 3,
+      "quality_issues": {
+        "invalid_timestamp": 1
+      },
+      "r001_alert": null,
+      "processing_error": "ValueError: Invalid isoformat string: 'invalid-timestamp'"
+    },
+    {
+      "case_id": "CASE-00036",
+      "scenario_id": "P02",
+      "condition": "invalid_ntlm_timestamp",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "invalid_timestamp": 1
+      },
+      "r001_alert": null,
+      "processing_error": "ValueError: Invalid isoformat string: 'invalid-timestamp'"
+    },
+    {
+      "case_id": "CASE-00037",
+      "scenario_id": "P01",
+      "condition": "invalid_ntlm_timestamp",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 3,
+      "quality_issues": {
+        "invalid_timestamp": 1
+      },
+      "r001_alert": null,
+      "processing_error": "ValueError: Invalid isoformat string: 'invalid-timestamp'"
+    },
+    {
+      "case_id": "CASE-00038",
+      "scenario_id": "P01",
+      "condition": "invalid_ntlm_timestamp",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 3,
+      "quality_issues": {
+        "invalid_timestamp": 1
+      },
+      "r001_alert": null,
+      "processing_error": "ValueError: Invalid isoformat string: 'invalid-timestamp'"
+    },
+    {
+      "case_id": "CASE-00040",
+      "scenario_id": "P02",
+      "condition": "invalid_ntlm_timestamp",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "invalid_timestamp": 1
+      },
+      "r001_alert": null,
+      "processing_error": "ValueError: Invalid isoformat string: 'invalid-timestamp'"
+    },
+    {
+      "case_id": "CASE-00044",
+      "scenario_id": "P02",
+      "condition": "invalid_ntlm_timestamp",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "invalid_timestamp": 1
+      },
+      "r001_alert": null,
+      "processing_error": "ValueError: Invalid isoformat string: 'invalid-timestamp'"
+    },
+    {
+      "case_id": "CASE-00046",
+      "scenario_id": "P01",
+      "condition": "invalid_ntlm_timestamp",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 3,
+      "quality_issues": {
+        "invalid_timestamp": 1
+      },
+      "r001_alert": null,
+      "processing_error": "ValueError: Invalid isoformat string: 'invalid-timestamp'"
+    },
+    {
+      "case_id": "CASE-00058",
+      "scenario_id": "P01",
+      "condition": "invalid_ntlm_timestamp",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 3,
+      "quality_issues": {
+        "invalid_timestamp": 1
+      },
+      "r001_alert": null,
+      "processing_error": "ValueError: Invalid isoformat string: 'invalid-timestamp'"
+    },
+    {
+      "case_id": "CASE-00063",
+      "scenario_id": "P02",
+      "condition": "invalid_ntlm_timestamp",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "invalid_timestamp": 1
+      },
+      "r001_alert": null,
+      "processing_error": "ValueError: Invalid isoformat string: 'invalid-timestamp'"
+    },
+    {
+      "case_id": "CASE-00065",
+      "scenario_id": "P01",
+      "condition": "invalid_ntlm_timestamp",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 3,
+      "quality_issues": {
+        "invalid_timestamp": 1
+      },
+      "r001_alert": null,
+      "processing_error": "ValueError: Invalid isoformat string: 'invalid-timestamp'"
+    },
+    {
+      "case_id": "CASE-00070",
+      "scenario_id": "P03",
+      "condition": "invalid_ntlm_timestamp",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "invalid_timestamp": 1
+      },
+      "r001_alert": null,
+      "processing_error": "ValueError: Invalid isoformat string: 'invalid-timestamp'"
+    },
+    {
+      "case_id": "CASE-00073",
+      "scenario_id": "P03",
+      "condition": "invalid_ntlm_timestamp",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "invalid_timestamp": 1
+      },
+      "r001_alert": null,
+      "processing_error": "ValueError: Invalid isoformat string: 'invalid-timestamp'"
+    },
+    {
+      "case_id": "CASE-00074",
+      "scenario_id": "P02",
+      "condition": "invalid_ntlm_timestamp",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "invalid_timestamp": 1
+      },
+      "r001_alert": null,
+      "processing_error": "ValueError: Invalid isoformat string: 'invalid-timestamp'"
+    },
+    {
+      "case_id": "CASE-00078",
+      "scenario_id": "P01",
+      "condition": "invalid_ntlm_timestamp",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 3,
+      "quality_issues": {
+        "invalid_timestamp": 1
+      },
+      "r001_alert": null,
+      "processing_error": "ValueError: Invalid isoformat string: 'invalid-timestamp'"
+    },
+    {
+      "case_id": "CASE-00079",
+      "scenario_id": "P03",
+      "condition": "invalid_ntlm_timestamp",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "invalid_timestamp": 1
+      },
+      "r001_alert": null,
+      "processing_error": "ValueError: Invalid isoformat string: 'invalid-timestamp'"
+    },
+    {
+      "case_id": "CASE-00083",
+      "scenario_id": "P02",
+      "condition": "invalid_ntlm_timestamp",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "invalid_timestamp": 1
+      },
+      "r001_alert": null,
+      "processing_error": "ValueError: Invalid isoformat string: 'invalid-timestamp'"
+    },
+    {
+      "case_id": "CASE-00089",
+      "scenario_id": "P01",
+      "condition": "invalid_ntlm_timestamp",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 3,
+      "quality_issues": {
+        "invalid_timestamp": 1
+      },
+      "r001_alert": null,
+      "processing_error": "ValueError: Invalid isoformat string: 'invalid-timestamp'"
+    },
+    {
+      "case_id": "CASE-00093",
+      "scenario_id": "P01",
+      "condition": "invalid_ntlm_timestamp",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 3,
+      "quality_issues": {
+        "invalid_timestamp": 1
+      },
+      "r001_alert": null,
+      "processing_error": "ValueError: Invalid isoformat string: 'invalid-timestamp'"
+    },
+    {
+      "case_id": "CASE-00094",
+      "scenario_id": "P03",
+      "condition": "invalid_ntlm_timestamp",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "invalid_timestamp": 1
+      },
+      "r001_alert": null,
+      "processing_error": "ValueError: Invalid isoformat string: 'invalid-timestamp'"
+    },
+    {
+      "case_id": "CASE-00097",
+      "scenario_id": "P02",
+      "condition": "invalid_ntlm_timestamp",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "invalid_timestamp": 1
+      },
+      "r001_alert": null,
+      "processing_error": "ValueError: Invalid isoformat string: 'invalid-timestamp'"
+    },
+    {
+      "case_id": "CASE-00100",
+      "scenario_id": "P03",
+      "condition": "invalid_ntlm_timestamp",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "invalid_timestamp": 1
+      },
+      "r001_alert": null,
+      "processing_error": "ValueError: Invalid isoformat string: 'invalid-timestamp'"
+    },
+    {
+      "case_id": "CASE-00103",
+      "scenario_id": "P03",
+      "condition": "invalid_ntlm_timestamp",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "invalid_timestamp": 1
+      },
+      "r001_alert": null,
+      "processing_error": "ValueError: Invalid isoformat string: 'invalid-timestamp'"
+    },
+    {
+      "case_id": "CASE-00109",
+      "scenario_id": "P02",
+      "condition": "invalid_ntlm_timestamp",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 2,
+      "quality_issues": {
+        "invalid_timestamp": 1
+      },
+      "r001_alert": null,
+      "processing_error": "ValueError: Invalid isoformat string: 'invalid-timestamp'"
+    },
+    {
+      "case_id": "CASE-00002",
+      "scenario_id": "P03",
+      "condition": "drop_ntlm",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 1,
+      "quality_issues": {},
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00003",
+      "scenario_id": "P02",
+      "condition": "drop_ntlm",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 1,
+      "quality_issues": {},
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00010",
+      "scenario_id": "P01",
+      "condition": "drop_ntlm",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 2,
+      "quality_issues": {},
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00018",
+      "scenario_id": "P03",
+      "condition": "drop_ntlm",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 1,
+      "quality_issues": {},
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00019",
+      "scenario_id": "P03",
+      "condition": "drop_ntlm",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 1,
+      "quality_issues": {},
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00026",
+      "scenario_id": "P03",
+      "condition": "drop_ntlm",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 1,
+      "quality_issues": {},
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00029",
+      "scenario_id": "P02",
+      "condition": "drop_ntlm",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 1,
+      "quality_issues": {},
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00030",
+      "scenario_id": "P01",
+      "condition": "drop_ntlm",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 2,
+      "quality_issues": {},
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00036",
+      "scenario_id": "P02",
+      "condition": "drop_ntlm",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 1,
+      "quality_issues": {},
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00037",
+      "scenario_id": "P01",
+      "condition": "drop_ntlm",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 2,
+      "quality_issues": {},
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00038",
+      "scenario_id": "P01",
+      "condition": "drop_ntlm",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 2,
+      "quality_issues": {},
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00040",
+      "scenario_id": "P02",
+      "condition": "drop_ntlm",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 1,
+      "quality_issues": {},
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00044",
+      "scenario_id": "P02",
+      "condition": "drop_ntlm",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 1,
+      "quality_issues": {},
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00046",
+      "scenario_id": "P01",
+      "condition": "drop_ntlm",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 2,
+      "quality_issues": {},
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00058",
+      "scenario_id": "P01",
+      "condition": "drop_ntlm",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 2,
+      "quality_issues": {},
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00063",
+      "scenario_id": "P02",
+      "condition": "drop_ntlm",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 1,
+      "quality_issues": {},
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00065",
+      "scenario_id": "P01",
+      "condition": "drop_ntlm",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 2,
+      "quality_issues": {},
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00070",
+      "scenario_id": "P03",
+      "condition": "drop_ntlm",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 1,
+      "quality_issues": {},
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00073",
+      "scenario_id": "P03",
+      "condition": "drop_ntlm",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 1,
+      "quality_issues": {},
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00074",
+      "scenario_id": "P02",
+      "condition": "drop_ntlm",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 1,
+      "quality_issues": {},
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00078",
+      "scenario_id": "P01",
+      "condition": "drop_ntlm",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 2,
+      "quality_issues": {},
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00079",
+      "scenario_id": "P03",
+      "condition": "drop_ntlm",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 1,
+      "quality_issues": {},
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00083",
+      "scenario_id": "P02",
+      "condition": "drop_ntlm",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 1,
+      "quality_issues": {},
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00089",
+      "scenario_id": "P01",
+      "condition": "drop_ntlm",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 2,
+      "quality_issues": {},
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00093",
+      "scenario_id": "P01",
+      "condition": "drop_ntlm",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 2,
+      "quality_issues": {},
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00094",
+      "scenario_id": "P03",
+      "condition": "drop_ntlm",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 1,
+      "quality_issues": {},
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00097",
+      "scenario_id": "P02",
+      "condition": "drop_ntlm",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 1,
+      "quality_issues": {},
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00100",
+      "scenario_id": "P03",
+      "condition": "drop_ntlm",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 1,
+      "quality_issues": {},
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00103",
+      "scenario_id": "P03",
+      "condition": "drop_ntlm",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 1,
+      "quality_issues": {},
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00109",
+      "scenario_id": "P02",
+      "condition": "drop_ntlm",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 1,
+      "quality_issues": {},
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00002",
+      "scenario_id": "P03",
+      "condition": "timestamp_skew_back_60s",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 2,
+      "quality_issues": {},
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00003",
+      "scenario_id": "P02",
+      "condition": "timestamp_skew_back_60s",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 2,
+      "quality_issues": {},
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00010",
+      "scenario_id": "P01",
+      "condition": "timestamp_skew_back_60s",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 3,
+      "quality_issues": {},
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00018",
+      "scenario_id": "P03",
+      "condition": "timestamp_skew_back_60s",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 2,
+      "quality_issues": {},
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00019",
+      "scenario_id": "P03",
+      "condition": "timestamp_skew_back_60s",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 2,
+      "quality_issues": {},
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00026",
+      "scenario_id": "P03",
+      "condition": "timestamp_skew_back_60s",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 2,
+      "quality_issues": {},
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00029",
+      "scenario_id": "P02",
+      "condition": "timestamp_skew_back_60s",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 2,
+      "quality_issues": {},
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00030",
+      "scenario_id": "P01",
+      "condition": "timestamp_skew_back_60s",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 3,
+      "quality_issues": {},
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00036",
+      "scenario_id": "P02",
+      "condition": "timestamp_skew_back_60s",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 2,
+      "quality_issues": {},
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00037",
+      "scenario_id": "P01",
+      "condition": "timestamp_skew_back_60s",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 3,
+      "quality_issues": {},
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00038",
+      "scenario_id": "P01",
+      "condition": "timestamp_skew_back_60s",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 3,
+      "quality_issues": {},
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00040",
+      "scenario_id": "P02",
+      "condition": "timestamp_skew_back_60s",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 2,
+      "quality_issues": {},
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00044",
+      "scenario_id": "P02",
+      "condition": "timestamp_skew_back_60s",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 2,
+      "quality_issues": {},
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00046",
+      "scenario_id": "P01",
+      "condition": "timestamp_skew_back_60s",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 3,
+      "quality_issues": {},
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00058",
+      "scenario_id": "P01",
+      "condition": "timestamp_skew_back_60s",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 3,
+      "quality_issues": {},
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00063",
+      "scenario_id": "P02",
+      "condition": "timestamp_skew_back_60s",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 2,
+      "quality_issues": {},
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00065",
+      "scenario_id": "P01",
+      "condition": "timestamp_skew_back_60s",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 3,
+      "quality_issues": {},
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00070",
+      "scenario_id": "P03",
+      "condition": "timestamp_skew_back_60s",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 2,
+      "quality_issues": {},
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00073",
+      "scenario_id": "P03",
+      "condition": "timestamp_skew_back_60s",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 2,
+      "quality_issues": {},
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00074",
+      "scenario_id": "P02",
+      "condition": "timestamp_skew_back_60s",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 2,
+      "quality_issues": {},
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00078",
+      "scenario_id": "P01",
+      "condition": "timestamp_skew_back_60s",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 3,
+      "quality_issues": {},
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00079",
+      "scenario_id": "P03",
+      "condition": "timestamp_skew_back_60s",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 2,
+      "quality_issues": {},
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00083",
+      "scenario_id": "P02",
+      "condition": "timestamp_skew_back_60s",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 2,
+      "quality_issues": {},
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00089",
+      "scenario_id": "P01",
+      "condition": "timestamp_skew_back_60s",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 3,
+      "quality_issues": {},
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00093",
+      "scenario_id": "P01",
+      "condition": "timestamp_skew_back_60s",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 3,
+      "quality_issues": {},
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00094",
+      "scenario_id": "P03",
+      "condition": "timestamp_skew_back_60s",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 2,
+      "quality_issues": {},
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00097",
+      "scenario_id": "P02",
+      "condition": "timestamp_skew_back_60s",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 2,
+      "quality_issues": {},
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00100",
+      "scenario_id": "P03",
+      "condition": "timestamp_skew_back_60s",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 2,
+      "quality_issues": {},
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00103",
+      "scenario_id": "P03",
+      "condition": "timestamp_skew_back_60s",
+      "original_behavior_label": 1,
+      "intent_annotation": "authorized",
+      "observed_event_count": 2,
+      "quality_issues": {},
+      "r001_alert": false,
+      "processing_error": null
+    },
+    {
+      "case_id": "CASE-00109",
+      "scenario_id": "P02",
+      "condition": "timestamp_skew_back_60s",
+      "original_behavior_label": 1,
+      "intent_annotation": "simulated_suspicious",
+      "observed_event_count": 2,
+      "quality_issues": {},
+      "r001_alert": false,
+      "processing_error": null
+    }
+  ],
+  "limitations": [
+    "Only original behavior-positive cases are evaluated.",
+    "This experiment does not measure false positives.",
+    "A processing error is not a negative prediction.",
+    "Dropped records cannot be inferred from remaining data alone.",
+    "Timestamp skew can be syntactically valid.",
+    "Synthetic results do not establish production accuracy."
+  ]
+}

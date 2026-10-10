@@ -115,8 +115,25 @@ def correlate_events(events):
             if (ip := get_ip(event, "destination"))
         })
 
+                # Connection and NTLM records must contain complete
+        # endpoint evidence. Missing values must not hide
+        # conflicting or incomplete authentication evidence.
+        required_records = [
+            event for event in ordered
+            if event["event_type"] in ("zeek.conn", "zeek.ntlm")
+        ]
+
+        required_endpoints_present = all(
+            isinstance(event.get(endpoint), dict)
+            and isinstance(event[endpoint].get("ip"), str)
+            and bool(event[endpoint]["ip"].strip())
+            for event in required_records
+            for endpoint in ("source", "destination")
+        )
+
         consistent_endpoints = (
-            len(source_ips) <= 1
+            required_endpoints_present
+            and len(source_ips) <= 1
             and len(destination_ips) <= 1
         )
 

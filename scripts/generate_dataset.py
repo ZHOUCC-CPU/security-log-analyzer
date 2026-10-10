@@ -143,8 +143,8 @@ def write_jsonl(path, records):
             for row in records
         ),
         encoding="utf-8",
+        newline="\n",
     )
-
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)

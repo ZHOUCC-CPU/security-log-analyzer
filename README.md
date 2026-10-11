@@ -14,9 +14,9 @@ The prototype includes a Zeek-based NTLM trust-boundary detection pipeline and s
 | **V0.4** | Deterministic labelled synthetic dataset, two simple baselines, classification metrics, and telemetry robustness experiments | `6b28efa` |
 | **V0.5** | Evidence-completeness assessment, explained reports, and a regression-checked comparison with V0.4 | `f0d2b0d` |
 | **V0.6** | Normalized-event quality assessment, controlled fault injection, endpoint-integrity correction, and synthetic processing performance evaluation | `e94b1ad` (quality phase) |
-| **V0.7** | Selected Windows and Linux authentication adapters, normalized event schema, candidate cross-source association, and labeled synthetic benchmark | Local study; CI pending |
+| **V0.7** | Selected Windows and Linux authentication adapters, normalized event schema, candidate cross-source association, and labeled synthetic benchmark | 978fe78 (CI #7 passed) |
 
-**Current locally verified test result:** 215 automated tests passing with the V0.7 benchmark code. Cloud CI validation of this uncommitted study is pending.
+**Current locally verified test result:** 215 automated tests passing locally; GitHub Actions CI #7 passed on Python 3.11 and 3.12.
 
 ## Research questions
 

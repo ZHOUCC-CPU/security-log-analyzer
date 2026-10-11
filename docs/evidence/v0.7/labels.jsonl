@@ -1,0 +1,12 @@
+{"case_id":"CS-000000","event_ids":["SYN-V07-000000-WIN","SYN-V07-000000-LINUX"],"related":true,"scenario":"P01_shared_activity"}
+{"case_id":"CS-000001","event_ids":["SYN-V07-000001-WIN","SYN-V07-000001-LINUX"],"related":true,"scenario":"P02_ipv6_shared_activity"}
+{"case_id":"CS-000002","event_ids":["SYN-V07-000002-WIN","SYN-V07-000002-LINUX"],"related":true,"scenario":"P03_time_boundary"}
+{"case_id":"CS-000003","event_ids":["SYN-V07-000003-WIN","SYN-V07-000003-LINUX"],"related":true,"scenario":"P04_delayed_related_activity"}
+{"case_id":"CS-000004","event_ids":["SYN-V07-000004-WIN","SYN-V07-000004-LINUX"],"related":false,"scenario":"N01_different_ip"}
+{"case_id":"CS-000005","event_ids":["SYN-V07-000005-WIN","SYN-V07-000005-LINUX"],"related":false,"scenario":"N02_different_username"}
+{"case_id":"CS-000006","event_ids":["SYN-V07-000006-WIN","SYN-V07-000006-LINUX"],"related":false,"scenario":"N03_unrelated_outside_window"}
+{"case_id":"CS-000007","event_ids":["SYN-V07-000007-WIN","SYN-V07-000007-LINUX"],"related":false,"scenario":"N04_nat_collision"}
+{"case_id":"CS-000008","event_ids":["SYN-V07-000008-WIN","SYN-V07-000008-LINUX"],"related":false,"scenario":"N05_shared_account_collision"}
+{"case_id":"CS-000009","event_ids":["SYN-V07-000009-WIN","SYN-V07-000009-LINUX"],"related":false,"scenario":"N06_missing_endpoint"}
+{"case_id":"CS-000010","event_ids":["SYN-V07-000010-WIN","SYN-V07-000010-LINUX"],"related":false,"scenario":"N07_success_not_failure"}
+{"case_id":"CS-000011","event_ids":["SYN-V07-000011-WIN","SYN-V07-000011-LINUX"],"related":false,"scenario":"N08_multicast_source"}

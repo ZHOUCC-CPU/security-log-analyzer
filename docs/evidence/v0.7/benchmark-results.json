@@ -1,0 +1,153 @@
+{
+  "candidate_pair_count": 5,
+  "cases": [
+    {
+      "case_id": "CS-000000",
+      "classification": "TP",
+      "event_ids": [
+        "SYN-V07-000000-LINUX",
+        "SYN-V07-000000-WIN"
+      ],
+      "predicted": true,
+      "related": true,
+      "scenario": "P01_shared_activity"
+    },
+    {
+      "case_id": "CS-000001",
+      "classification": "TP",
+      "event_ids": [
+        "SYN-V07-000001-LINUX",
+        "SYN-V07-000001-WIN"
+      ],
+      "predicted": true,
+      "related": true,
+      "scenario": "P02_ipv6_shared_activity"
+    },
+    {
+      "case_id": "CS-000002",
+      "classification": "TP",
+      "event_ids": [
+        "SYN-V07-000002-LINUX",
+        "SYN-V07-000002-WIN"
+      ],
+      "predicted": true,
+      "related": true,
+      "scenario": "P03_time_boundary"
+    },
+    {
+      "case_id": "CS-000003",
+      "classification": "FN",
+      "event_ids": [
+        "SYN-V07-000003-LINUX",
+        "SYN-V07-000003-WIN"
+      ],
+      "predicted": false,
+      "related": true,
+      "scenario": "P04_delayed_related_activity"
+    },
+    {
+      "case_id": "CS-000004",
+      "classification": "TN",
+      "event_ids": [
+        "SYN-V07-000004-LINUX",
+        "SYN-V07-000004-WIN"
+      ],
+      "predicted": false,
+      "related": false,
+      "scenario": "N01_different_ip"
+    },
+    {
+      "case_id": "CS-000005",
+      "classification": "TN",
+      "event_ids": [
+        "SYN-V07-000005-LINUX",
+        "SYN-V07-000005-WIN"
+      ],
+      "predicted": false,
+      "related": false,
+      "scenario": "N02_different_username"
+    },
+    {
+      "case_id": "CS-000006",
+      "classification": "TN",
+      "event_ids": [
+        "SYN-V07-000006-LINUX",
+        "SYN-V07-000006-WIN"
+      ],
+      "predicted": false,
+      "related": false,
+      "scenario": "N03_unrelated_outside_window"
+    },
+    {
+      "case_id": "CS-000007",
+      "classification": "FP",
+      "event_ids": [
+        "SYN-V07-000007-LINUX",
+        "SYN-V07-000007-WIN"
+      ],
+      "predicted": true,
+      "related": false,
+      "scenario": "N04_nat_collision"
+    },
+    {
+      "case_id": "CS-000008",
+      "classification": "FP",
+      "event_ids": [
+        "SYN-V07-000008-LINUX",
+        "SYN-V07-000008-WIN"
+      ],
+      "predicted": true,
+      "related": false,
+      "scenario": "N05_shared_account_collision"
+    },
+    {
+      "case_id": "CS-000009",
+      "classification": "TN",
+      "event_ids": [
+        "SYN-V07-000009-LINUX",
+        "SYN-V07-000009-WIN"
+      ],
+      "predicted": false,
+      "related": false,
+      "scenario": "N06_missing_endpoint"
+    },
+    {
+      "case_id": "CS-000010",
+      "classification": "TN",
+      "event_ids": [
+        "SYN-V07-000010-LINUX",
+        "SYN-V07-000010-WIN"
+      ],
+      "predicted": false,
+      "related": false,
+      "scenario": "N07_success_not_failure"
+    },
+    {
+      "case_id": "CS-000011",
+      "classification": "TN",
+      "event_ids": [
+        "SYN-V07-000011-LINUX",
+        "SYN-V07-000011-WIN"
+      ],
+      "predicted": false,
+      "related": false,
+      "scenario": "N08_multicast_source"
+    }
+  ],
+  "counts": {
+    "fn": 1,
+    "fp": 2,
+    "tn": 6,
+    "tp": 3
+  },
+  "evaluation_scope": "predefined_synthetic_activity_relationship",
+  "event_count": 24,
+  "label_count": 12,
+  "metrics": {
+    "f1": 0.6666666666666665,
+    "precision": 0.6,
+    "recall": 0.75
+  },
+  "production_accuracy_claim": false,
+  "window_seconds": 120
+}

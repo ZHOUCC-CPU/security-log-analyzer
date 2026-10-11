@@ -1,0 +1,33 @@
+{
+  "dataset_version": "v0.7",
+  "evaluation_scope": "predefined_synthetic_activity_relationship",
+  "evaluation_window_seconds": 120,
+  "event_count": 24,
+  "files": {
+    "benchmark-results.json": {
+      "sha256": "dfba927168d561c9ef2dbe28b9079c7637ee3236ed6e81d49306ca0ba56d4fc2"
+    },
+    "events.jsonl": {
+      "records": 24,
+      "sha256": "bc91fec168499d79a610d857b658f24afbab0d8194c6a0a96d4102779d792ef9"
+    },
+    "labels.jsonl": {
+      "records": 12,
+      "sha256": "3ed2581ba9d867b32abbc16a45aee98cf285062f5ad3c2730319b839eecb6b60"
+    }
+  },
+  "label_count": 12,
+  "label_definition": "predefined_synthetic_activity_relationship",
+  "negative_count": 8,
+  "positive_count": 4,
+  "production_accuracy_claim": false,
+  "repeats": 1,
+  "reproduction": {
+    "evaluator": "scripts/evaluate_cross_source_v07.py",
+    "exporter": "scripts/export_cross_source_v07.py",
+    "generator": "scripts/generate_cross_source_v07.py"
+  },
+  "scenario_count": 12,
+  "schema_version": "0.7.0",
+  "seed": 20261010
+}

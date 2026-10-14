@@ -1,0 +1,6 @@
+{"case_id":"TS-000000","event_ids":["9845c9d4eb42354a9212202237a0cb085d780fd170eeab036816a85f8a3e60c5","windows:LAB-WIN-00000:Security:1"],"related":true,"scenario":"P01_windows_ipv4"}
+{"case_id":"TS-000001","event_ids":["5b23de9c909091f7d21683fdfaa828c49ff2c8cac008929e721834166e505bb4","linux:lab-linux-00001:synthetic-linux.log:2"],"related":true,"scenario":"P02_linux_ipv4"}
+{"case_id":"TS-000002","event_ids":["81d559dfd96aaeafc6106c1367cb9c1af7cb383f3a88adc309ddded5f3eb9d76","linux:lab-linux-00002:synthetic-linux.log:3"],"related":true,"scenario":"P03_linux_ipv6"}
+{"case_id":"TS-000003","event_ids":["e115159e96158bd1345dfd4b5d5202543f676b1ced33ebb5db71a2329ac723cd","windows:LAB-WIN-00003:Security:4"],"related":false,"scenario":"N01_nat_collision"}
+{"case_id":"TS-000004","event_ids":["1bb5f04460e253d74877119014dfd7eb4fd2fb7bd4d1343feeb56894c79d53a8","linux:lab-linux-00004:synthetic-linux.log:5"],"related":false,"scenario":"N02_reversed_direction"}
+{"case_id":"TS-000005","event_ids":["e88a3d3bf2979983ba70ee546bb97132b93c85be6bdedc56138c82d7e594a712","windows:LAB-WIN-00005:Security:6"],"related":false,"scenario":"N03_wrong_host_mapping"}

@@ -1,0 +1,6 @@
+{"host":"LAB-WIN-00000","ip":"203.0.113.10","provenance":{"filename":"synthetic-host-mappings.jsonl","line_number":1}}
+{"host":"lab-linux-00001","ip":"203.0.113.11","provenance":{"filename":"synthetic-host-mappings.jsonl","line_number":2}}
+{"host":"lab-linux-00002","ip":"2001:db8:2::3","provenance":{"filename":"synthetic-host-mappings.jsonl","line_number":3}}
+{"host":"LAB-WIN-00003","ip":"203.0.113.13","provenance":{"filename":"synthetic-host-mappings.jsonl","line_number":4}}
+{"host":"lab-linux-00004","ip":"203.0.113.14","provenance":{"filename":"synthetic-host-mappings.jsonl","line_number":5}}
+{"host":"LAB-WIN-00005","ip":"192.0.2.15","provenance":{"filename":"synthetic-host-mappings.jsonl","line_number":6}}

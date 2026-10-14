@@ -1,0 +1,38 @@
+{
+  "dataset_version": "v0.8-phase2",
+  "evaluation_scope": "predefined_synthetic_activity_relationship",
+  "evaluation_window_seconds": 120,
+  "event_count": 12,
+  "files": {
+    "benchmark-results.json": {
+      "sha256": "cfd46a7da72cb40f193bfc4c0ed12a0578400dc3ff96e461ac7b3e966bafeade"
+    },
+    "events.jsonl": {
+      "records": 12,
+      "sha256": "804e0424638109b93f7245a4b3c464f4aa56d85470c74df417a910dccc67472f"
+    },
+    "host-mappings.jsonl": {
+      "records": 6,
+      "sha256": "ef3d5e7753b394f559eb24acedf73b93ff1a14f1375792f6adde970b4f7e5db8"
+    },
+    "labels.jsonl": {
+      "records": 6,
+      "sha256": "f57f50394afc70f0b673094aae69f25e796b293665e7b2c65099399b45d205c6"
+    }
+  },
+  "host_mapping_count": 6,
+  "label_count": 6,
+  "label_definition": "predefined_synthetic_activity_relationship",
+  "negative_count": 3,
+  "positive_count": 3,
+  "production_accuracy_claim": false,
+  "repeats": 1,
+  "reproduction": {
+    "evaluator": "scripts/evaluate_three_source_v08.py",
+    "exporter": "scripts/export_three_source_v08.py",
+    "generator": "scripts/generate_three_source_v08.py"
+  },
+  "scenario_count": 6,
+  "schema_version": "0.7.0",
+  "seed": 20261011
+}

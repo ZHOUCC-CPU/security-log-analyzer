@@ -2,9 +2,9 @@
 
 **A lightweight, research-oriented security log analysis and evidence-correlation prototype built with Python.**
 
-The prototype includes a Zeek-based NTLM trust-boundary detection pipeline and separate V0.7 adapters for selected Windows Security Events and Linux SSH authentication records. V0.7 adds normalized authentication events and a controlled Windows/Linux cross-source candidate-association experiment. The project includes deterministic synthetic datasets, reproducible evaluations, and automated tests.
+The prototype combines Zeek-based NTLM trust-boundary detection, selected Windows/Linux authentication adapters, and separate V0.7 and V0.8 candidate association studies. V0.8 adds controlled Zeek-to-host evidence association, reproducible synthetic experiments, and automated validation.
 
-> **Research scope:** R001 identifies observable Zeek authentication behavior requiring investigation. The separate V0.7 Windows/Linux association rule identifies candidate event co-occurrences, not proven shared sessions or attacks. Neither pipeline establishes malicious intent, exploitation, or production detection accuracy.
+> **Research scope:** R001 identifies observable Zeek authentication behavior requiring investigation. V0.7 Windows/Linux and V0.8 Zeek-to-host studies produce candidate associations, not verified shared sessions or attacks. These results do not establish malicious intent, exploitation, or production detection accuracy.
 
 ## Project status
 
@@ -15,8 +15,10 @@ The prototype includes a Zeek-based NTLM trust-boundary detection pipeline and s
 | **V0.5** | Evidence-completeness assessment, explained reports, and a regression-checked comparison with V0.4 | `f0d2b0d` |
 | **V0.6** | Normalized-event quality assessment, controlled fault injection, endpoint-integrity correction, and synthetic processing performance evaluation | `e94b1ad` (quality phase) |
 | **V0.7** | Selected Windows and Linux authentication adapters, normalized event schema, candidate cross-source association, and labeled synthetic benchmark | 978fe78 (CI #7 passed) |
+| **V0.8 Phase 1** | Zeek schema adapter and regression tests | `00e95d2` (CI #10 passed) |
+| **V0.8 Phase 2** | Zeek-to-host association study, synthetic evidence and research report | Local tests passed; CI pending |
 
-**Current locally verified test result:** 215 automated tests passing locally; GitHub Actions CI #7 passed on Python 3.11 and 3.12.
+**Current test status:** 318 tests passed locally. V0.8 Phase 1 CI #10 passed 247 tests on Python 3.11 and 3.12. Phase 2 CI is pending.
 
 ## Research questions
 
@@ -25,7 +27,7 @@ The prototype includes a Zeek-based NTLM trust-boundary detection pipeline and s
 3. Can detection output describe evidence completeness and provenance without conflating corroboration with malicious intent?
 4. What limitations prevent these laboratory and synthetic findings from being generalized to production environments?
 
-V0.6 includes controlled synthetic processing-performance measurements. V0.7 adds limited Windows/Linux normalization and candidate association. Real-world heterogeneous-log validation, Zeek-to-host correlation, and production-scale evaluation remain future work.
+V0.6 includes synthetic processing-performance measurements. V0.7 adds selected Windows/Linux normalization and candidate association. V0.8 adds Zeek schema compatibility and a controlled Zeek-to-host association experiment. Real-world validation and production-scale evaluation remain future work.
 
 ## Implemented functionality
 
@@ -74,6 +76,19 @@ The explained report attaches evidence assessments to R001 findings and separate
 This cross-source experiment does **not** incorporate Zeek events
 into its Windows/Linux association rule.
 
+### V0.8: Zeek-to-host candidate associations
+
+V0.8 extends the research prototype with a controlled Zeek-to-host evidence association study.
+
+- Adapt selected Zeek observations to the normalized schema.
+- Associate Zeek connections with selected Windows and Linux failed-authentication records.
+- Use explicit host mappings, network endpoint direction, service ports, and timestamps.
+- Check protocol and known client source-port compatibility.
+- Preserve event IDs, Zeek UIDs, and source provenance.
+- Return `candidate_evidence_association`, not a confirmed attack or session.
+- Retain NAT/shared-address ambiguity as a possible false association.
+- Keep the original R001 and V0.7 experiments independent.
+
 ## Architecture
 
 ```text
@@ -98,7 +113,7 @@ R001 trust-boundary rule   Evidence-completeness assessment
             reason codes, provenance)
 ```
 
-The diagram above represents the existing Zeek R001 pipeline. The independent V0.7 pipeline normalizes selected Windows/Linux authentication observations, identifies candidate pairs, and evaluates them against synthetic relationship labels. A unified three-source Zeek/Windows/Linux correlation pipeline is not yet implemented.
+The diagram above represents the existing Zeek R001 pipeline. The independent V0.7 pipeline normalizes selected Windows/Linux authentication observations, identifies candidate pairs, and evaluates them against synthetic relationship labels. V0.8 Phase 2 evaluates Zeek-to-Windows and Zeek-to-Linux candidate associations across three supported source categories. Each candidate contains one Zeek event and one host event. This is not a production SIEM or proof of a shared session.
 
 ## Reproduce the experiments
 
@@ -146,6 +161,20 @@ python .\scripts\export_cross_source_v07.py
 The command uses seed `20261010`, one repetition and a
 120-second association window. It regenerates the versioned
 evidence files under `docs/evidence/v0.7/`.
+
+Reproduce the **V0.8 Phase 2 synthetic experiment**:
+
+    python scripts/export_three_source_v08.py
+
+This command uses seed `20261011`, one repetition, and a
+120-second association window. It regenerates five evidence
+files in `docs/evidence/v0.8/`.
+
+Research documentation:
+
+- [V0.8 research design](docs/design-v0.8.md)
+- [V0.8 Phase 2 research report](docs/results-v0.8-three-source.md)
+- [V0.8 synthetic evidence](docs/evidence/v0.8/)
 
 Generated reports under `results/` are deliberately Git-ignored. The versioned dataset and its SHA-256 manifest are in [`datasets/synthetic/v0.4/`](datasets/synthetic/v0.4/).
 
@@ -250,6 +279,35 @@ the separate Zeek R001 pipeline was not modified.
 See the [V0.7 research report](docs/results-v0.7-cross-source.md)
 and [versioned synthetic evidence](docs/evidence/v0.7/).
 
+### V0.8 Phase 2: Synthetic Zeek-to-host association results
+
+The experiment uses **12 synthetic events**, **6 labeled pairs**,
+and **6 explicit host mappings**, with a 120-second association window.
+
+| Measure | Result |
+| --- | ---: |
+| Candidate pairs | 4 |
+| TP / FP / TN / FN | 3 / 1 / 2 / 0 |
+| Precision | 75.00% |
+| Recall | 100.00% |
+| F1-score | 85.71% |
+
+The deliberately ambiguous `N01_nat_collision` scenario produces
+one false association. Reversed-direction and wrong-host-mapping
+negative controls are rejected.
+
+At a 44-second window, all four candidates disappear, including
+the three predefined related pairs.
+
+**Research limitation:** Labels describe predefined synthetic
+activity relationships, not confirmed shared sessions or attacks.
+These results do not establish production detection accuracy.
+V0.7 and V0.8 use different datasets and must not be compared
+as if they measure the same population.
+
+See the [V0.8 research report](docs/results-v0.8-three-source.md)
+and [reproducible evidence](docs/evidence/v0.8/).
+
 Full methodology and interpretations:
 
 - [Research design](docs/research-design.md)
@@ -280,7 +338,7 @@ docs/evidence/v0.7/          Archived synthetic cross-source evidence
 - **Behavior is not intent.** Authorized NTLM authentication can be flagged; no rule output proves maliciousness or exploitation.
 - **Missing evidence is not evidence of safety.** UID mismatches, clock skew, and incomplete logs can prevent correlation.
 - **Simple baselines are not mature security products.** Comparative results depend strongly on the selected baselines and case distribution.
-- **Heterogeneous support is limited.** V0.7 handles selected structured Windows records and ISO 8601 SSH messages; it does not offer general EVTX/syslog ingestion or a three-source Zeek/Windows/Linux association method.
+- **Heterogeneous support is limited.** V0.8 studies selected Zeek-to-host pairs using structured Windows records, ISO 8601 SSH messages, and explicit host mappings. General EVTX/syslog ingestion and verified cross-platform session identity remain unsupported.
 - **Performance evaluation is limited to controlled synthetic workloads.** The V0.6 benchmark measures in-memory processing on Windows using Python 3.12.11. It does not establish production throughput, real-time ingestion capacity, or total-process memory consumption.
 - Use only synthetic, owned, or explicitly authorized security data. Keep credentials, identifiable operational logs, and private datasets out of public commits.
 
@@ -290,6 +348,6 @@ docs/evidence/v0.7/          Archived synthetic cross-source evidence
 - Investigate controlled clock-skew tolerance and telemetry gaps while measuring both recall and false-positive trade-offs.
 - Add explicit diagnostic reasons for policy non-matches beyond evidence completeness.
 - Extend processing-performance evaluation to additional hardware, larger workloads, and full-process memory measurements.
-- Extend real-format Windows/Linux compatibility and independently evaluate a separate Zeek integration experiment.
+- Extend real-format Windows/Linux compatibility and investigate additional Zeek-to-host negative controls, NAT ambiguity, clock skew, and larger controlled datasets.
 
-**Project maturity:** Research prototype (V0.7 local study); not a production SIEM or a validated malicious-attack classifier.
+**Project maturity:** Research prototype (V0.8 Phase 2 locally verified; cloud CI pending); not a production SIEM or a validated malicious-attack classifier.

@@ -4,3 +4,4 @@ docs/results-v0.6-quality.md text eol=lf
 README.md text eol=lf
 docs/evidence/v0.7/benchmark-results.json text eol=lf
 docs/evidence/v0.7/manifest.json text eol=lf
+docs/evidence/v0.8/*.json text eol=lf

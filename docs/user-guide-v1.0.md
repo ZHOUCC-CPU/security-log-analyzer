@@ -29,9 +29,8 @@ Ground-truth relationship labels are not loaded.
 
 Run all commands from the repository root.
 
-The V1.0 demonstration must be present in the
-checkout. It will become available to new clones
-after the V1.0 changes are committed and published.
+The V1.0 demonstration is included in the repository
+on `main` as of commit `47224e5`.
 
 ## 3. Supported Input Files
 
@@ -86,7 +85,7 @@ already exists. Existing reports are not overwritten.
 
 Use the corresponding Python command:
 
-    python3 scripts/demo_v10.py docs/evidence/v0.9/events.jsonl docs/evidence/v0.9/host-mappings.json results/demo-v1.0-guide.json --window-seconds 120
+    python3 scripts/demo_v10.py docs/evidence/v0.9/events.jsonl docs/evidence/v0.9/host-mappings.jsonl results/demo-v1.0-guide.json --window-seconds 120
 
 The input files, results, and interpretation are
 the same across supported environments, subject
@@ -183,10 +182,10 @@ Run V1.0 demonstration-specific tests:
 
     python -m unittest discover -s tests -p test_demo_v10.py -v
 
-At this development checkpoint, 380 tests passed
-locally, including 17 demonstration tests and
-six performance benchmark tests.
-V1.0 GitHub CI validation remains pending.
+For V1.0, 380 tests passed locally, including
+17 demonstration tests and six performance
+benchmark tests. GitHub Actions #14 also passed
+380 tests each on Python 3.11 and 3.12.
 
 The historical V0.9 research evidence is archived
 under docs/evidence/v0.9.

@@ -277,7 +277,7 @@ At the time of this report:
 - All eight V0.9 exporter tests passed.
 - Three method-specific confusion matrices were verified.
 - Repeated synthetic generation was tested.
-- GitHub Actions validation of V0.9 remains pending.
+- GitHub Actions CI #12 passed all 357 tests on both Python 3.11 and 3.12.
 
 ## 11. Limitations and Threats to Validity
 

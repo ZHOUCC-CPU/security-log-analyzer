@@ -17,9 +17,9 @@ The prototype combines Zeek-based NTLM trust-boundary detection, selected Window
 | **V0.7** | Selected Windows and Linux authentication adapters, normalized event schema, candidate cross-source association, and labeled synthetic benchmark | 978fe78 (CI #7 passed) |
 | **V0.8 Phase 1** | Zeek schema adapter and regression tests | `00e95d2` (CI #10 passed) |
 | **V0.8 Phase 2** | Zeek-to-host association study, synthetic evidence and research report | CI #11 passed (Python 3.11/3.12; 318 tests each) |
-| **V0.9** | Three association methods, 16 synthetic cases, reproducible evidence and comparative research report | 357 local tests passed; CI pending |
+| **V0.9** | Three association methods, 16 synthetic cases, reproducible evidence and comparative research report | CI #12 passed (Python 3.11/3.12; 357 tests each) |
 
-**Current test status:** V0.9 has 357 locally passing tests; V0.9 GitHub CI is pending. V0.8 Phase 2 CI #11 passed 318 tests on Python 3.11 and 3.12.
+**Current test status:** V0.9 has 357 locally passing tests; V0.9 GitHub CI #12 passed 357 tests on Python 3.11 and 3.12. V0.8 Phase 2 CI #11 passed 318 tests on Python 3.11 and 3.12.
 
 ## Research questions
 
@@ -391,4 +391,4 @@ docs/evidence/v0.9/          Comparative synthetic research evidence
 - Extend processing-performance evaluation to additional hardware, larger workloads, and full-process memory measurements.
 - Extend real-format Windows/Linux compatibility and investigate additional Zeek-to-host negative controls, NAT ambiguity, clock skew, and larger controlled datasets.
 
-**Project maturity:** Research prototype (V0.9 locally verified; V0.9 CI pending); not a production SIEM or a validated malicious-attack classifier.
+**Project maturity:** Research prototype (V0.9 verified locally and by GitHub CI #12); not a production SIEM or a validated malicious-attack classifier.

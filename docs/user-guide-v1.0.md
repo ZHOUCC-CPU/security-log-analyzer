@@ -184,7 +184,7 @@ Run V1.0 demonstration-specific tests:
 
 For V1.0, 380 tests passed locally, including
 17 demonstration tests and six performance
-benchmark tests. GitHub Actions #14 also passed
+benchmark tests. GitHub Actions #15 also passed
 380 tests each on Python 3.11 and 3.12.
 
 The historical V0.9 research evidence is archived

@@ -18,9 +18,9 @@ The prototype combines Zeek-based NTLM trust-boundary detection, selected Window
 | **V0.8 Phase 1** | Zeek schema adapter and regression tests | `00e95d2` (CI #10 passed) |
 | **V0.8 Phase 2** | Zeek-to-host association study, synthetic evidence and research report | CI #11 passed (Python 3.11/3.12; 318 tests each) |
 | **V0.9** | Three association methods, 16 synthetic cases, reproducible evidence and comparative research report | CI #12 passed (Python 3.11/3.12; 357 tests each) |
-| **V1.0 (release candidate)** | Offline normalized-JSONL demonstration, protocol evidence reporting, reliability tests, and controlled synthetic performance measurements | Local: 380 tests passed; GitHub CI #14 passed 380 tests each on Python 3.11/3.12 |
+| **V1.0 (release approved)** | Offline normalized-JSONL demonstration, protocol evidence reporting, reliability tests, and controlled synthetic performance measurements | Local: 380 tests passed; GitHub CI #15 passed 380 tests each on Python 3.11/3.12 |
 
-**Current test status:** V1.0 has 380 locally passing tests on Python 3.12. GitHub Actions #14 passed 380 tests each on Python 3.11 and 3.12 (commit `47224e5`). V0.9 GitHub CI #13 passed 357 tests on Python 3.11 and 3.12.
+**Current test status:** V1.0 has 380 locally passing tests on Python 3.12. GitHub Actions #15 passed 380 tests each on Python 3.11 and 3.12 (commit `a2f7e47`). V0.9 GitHub CI #13 passed 357 tests on Python 3.11 and 3.12.
 
 ## Research questions
 
@@ -375,7 +375,7 @@ docs/evidence/v0.9/          Comparative synthetic research evidence
 docs/evidence/v1.0/          Controlled synthetic performance evidence
 ```
 
-## V1.0 release candidate
+## V1.0
 
 V1.0 currently provides an offline demonstration using
 **already normalized JSONL observations** and explicit
@@ -445,10 +445,11 @@ measurements may vary between executions.
 - [V1.0 archived benchmark evidence](docs/evidence/v1.0/benchmark-results.json)
 - [V1.0 evidence manifest](docs/evidence/v1.0/manifest.json)
 
-**Release status:** V1.0 development, local verification,
-repository review, and GitHub Actions #14 are complete.
-The formal `v1.0.0` release tag and release approval
-remain pending.
+**Release status:** V1.0 is approved for a `v1.0.0`
+release after local verification, repository review,
+and GitHub Actions #15 (380 tests each on Python 3.11
+and 3.12). The GitHub Releases page is the authoritative
+source for publication and tag status.
 
 ## Limitations and responsible use
 
@@ -468,4 +469,4 @@ remain pending.
 - Extend processing-performance evaluation to additional hardware, larger workloads, and full-process memory measurements.
 - Extend real-format Windows/Linux compatibility and investigate additional Zeek-to-host negative controls, NAT ambiguity, clock skew, and larger controlled datasets.
 
-**Project maturity:** Research prototype (V1.0 verified locally and by GitHub Actions #14); not a production SIEM or a validated malicious-attack classifier.
+**Project maturity:** Research prototype (V1.0 verified locally and by GitHub Actions #15); not a production SIEM or a validated malicious-attack classifier.

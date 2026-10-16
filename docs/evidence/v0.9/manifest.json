@@ -1,0 +1,38 @@
+{
+  "dataset_version": "v0.9",
+  "evaluation_scope": "predefined_synthetic_activity_relationship",
+  "evaluation_window_seconds": 120,
+  "event_count": 32,
+  "files": {
+    "benchmark-results.json": {
+      "sha256": "f1efab7c29aa25d3eedd35f87f92c6d92dcc7ad22bf9c8c0d95c3efed93ff0b7"
+    },
+    "events.jsonl": {
+      "records": 32,
+      "sha256": "3d8bb09858df155afb0f3156ebde02500b6f889251d6ed08543c755fea40458d"
+    },
+    "host-mappings.jsonl": {
+      "records": 16,
+      "sha256": "f2f6eec86748adccdc850c558bc0e537f9f7507b26044d886ecd7379eab6d875"
+    },
+    "labels.jsonl": {
+      "records": 16,
+      "sha256": "0ac2079ad02fdae8121fcfb4fd67e1e21a100e690f45c9751b5e1c412d8c5487"
+    }
+  },
+  "host_mapping_count": 16,
+  "label_count": 16,
+  "label_definition": "predefined_synthetic_activity_relationship",
+  "negative_count": 8,
+  "positive_count": 8,
+  "production_accuracy_claim": false,
+  "repeats": 1,
+  "reproduction": {
+    "evaluator": "scripts/evaluate_comparison_v09.py",
+    "exporter": "scripts/export_comparison_v09.py",
+    "generator": "scripts/generate_comparison_v09.py"
+  },
+  "scenario_count": 16,
+  "schema_version": "0.7.0",
+  "seed": 20261011
+}

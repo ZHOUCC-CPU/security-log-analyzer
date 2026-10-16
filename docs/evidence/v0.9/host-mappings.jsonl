@@ -1,0 +1,16 @@
+{"host":"LAB-WIN-00000","ip":"203.0.113.10","provenance":{"filename":"synthetic-host-mappings.jsonl","line_number":1}}
+{"host":"lab-linux-00001","ip":"203.0.113.11","provenance":{"filename":"synthetic-host-mappings.jsonl","line_number":2}}
+{"host":"lab-linux-00002","ip":"2001:db8:2::3","provenance":{"filename":"synthetic-host-mappings.jsonl","line_number":3}}
+{"host":"LAB-WIN-00003","ip":"203.0.113.13","provenance":{"filename":"synthetic-host-mappings.jsonl","line_number":4}}
+{"host":"lab-linux-00004","ip":"203.0.113.14","provenance":{"filename":"synthetic-host-mappings.jsonl","line_number":5}}
+{"host":"LAB-WIN-00005","ip":"192.0.2.15","provenance":{"filename":"synthetic-host-mappings.jsonl","line_number":6}}
+{"host":"lab-linux-00006","ip":"203.0.113.16","provenance":{"filename":"synthetic-host-mappings.jsonl","line_number":7}}
+{"host":"lab-linux-00007","ip":"203.0.113.17","provenance":{"filename":"synthetic-host-mappings.jsonl","line_number":8}}
+{"host":"lab-linux-00008","ip":"203.0.113.18","provenance":{"filename":"synthetic-host-mappings.jsonl","line_number":9}}
+{"host":"lab-linux-00009","ip":"203.0.113.19","provenance":{"filename":"synthetic-host-mappings.jsonl","line_number":10}}
+{"host":"lab-linux-00010","ip":"203.0.113.20","provenance":{"filename":"synthetic-host-mappings.jsonl","line_number":11}}
+{"host":"lab-linux-00011","ip":"203.0.113.21","provenance":{"filename":"synthetic-host-mappings.jsonl","line_number":12}}
+{"host":"lab-linux-00012","ip":"203.0.113.22","provenance":{"filename":"synthetic-host-mappings.jsonl","line_number":13}}
+{"host":"lab-linux-00013","ip":"203.0.113.23","provenance":{"filename":"synthetic-host-mappings.jsonl","line_number":14}}
+{"host":"lab-linux-00014","ip":"203.0.113.24","provenance":{"filename":"synthetic-host-mappings.jsonl","line_number":15}}
+{"host":"lab-linux-00015","ip":"2001:db8:3::10","provenance":{"filename":"synthetic-host-mappings.jsonl","line_number":16}}

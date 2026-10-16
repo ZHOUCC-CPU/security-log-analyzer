@@ -2,7 +2,7 @@
 
 **A lightweight, research-oriented security log analysis and evidence-correlation prototype built with Python.**
 
-The prototype combines Zeek-based NTLM trust-boundary detection, selected Windows/Linux authentication adapters, and separate V0.7 and V0.8 candidate association studies. V0.8 adds controlled Zeek-to-host evidence association, reproducible synthetic experiments, and automated validation.
+The prototype combines Zeek-based NTLM trust-boundary detection, selected Windows/Linux authentication adapters, and separate V0.7 and V0.8 candidate association studies. V0.8 adds controlled Zeek-to-host evidence association, reproducible synthetic experiments, and automated validation. V0.9 adds three-method comparisons and expanded robustness scenarios.
 
 > **Research scope:** R001 identifies observable Zeek authentication behavior requiring investigation. V0.7 Windows/Linux and V0.8 Zeek-to-host studies produce candidate associations, not verified shared sessions or attacks. These results do not establish malicious intent, exploitation, or production detection accuracy.
 
@@ -16,9 +16,10 @@ The prototype combines Zeek-based NTLM trust-boundary detection, selected Window
 | **V0.6** | Normalized-event quality assessment, controlled fault injection, endpoint-integrity correction, and synthetic processing performance evaluation | `e94b1ad` (quality phase) |
 | **V0.7** | Selected Windows and Linux authentication adapters, normalized event schema, candidate cross-source association, and labeled synthetic benchmark | 978fe78 (CI #7 passed) |
 | **V0.8 Phase 1** | Zeek schema adapter and regression tests | `00e95d2` (CI #10 passed) |
-| **V0.8 Phase 2** | Zeek-to-host association study, synthetic evidence and research report | Local tests passed; CI pending |
+| **V0.8 Phase 2** | Zeek-to-host association study, synthetic evidence and research report | CI #11 passed (Python 3.11/3.12; 318 tests each) |
+| **V0.9** | Three association methods, 16 synthetic cases, reproducible evidence and comparative research report | 357 local tests passed; CI pending |
 
-**Current test status:** 318 tests passed locally. V0.8 Phase 1 CI #10 passed 247 tests on Python 3.11 and 3.12. Phase 2 CI is pending.
+**Current test status:** V0.9 has 357 locally passing tests; V0.9 GitHub CI is pending. V0.8 Phase 2 CI #11 passed 318 tests on Python 3.11 and 3.12.
 
 ## Research questions
 
@@ -308,6 +309,42 @@ as if they measure the same population.
 See the [V0.8 research report](docs/results-v0.8-three-source.md)
 and [reproducible evidence](docs/evidence/v0.8/).
 
+### V0.9: Controlled association method comparison
+
+V0.9 compares time-only, source-IP-plus-time, and the existing
+V0.8 endpoint-aware candidate association policy on the same
+16 predefined synthetic relationship pairs.
+
+| Metric | Time only | IP and time | V0.8 policy |
+| --- | ---: | ---: | ---: |
+| TP / FP / TN / FN | 7 / 8 / 0 / 1 | 6 / 6 / 2 / 2 | 5 / 1 / 7 / 3 |
+| Precision | 46.67% | 50.00% | 83.33% |
+| Recall | 87.50% | 75.00% | 62.50% |
+| F1 | 60.87% | 60.00% | 71.43% |
+
+The stricter policy produces fewer false associations but
+misses related synthetic activities involving port translation
+or missing network evidence. A NAT/shared-address false
+association remains unresolved.
+
+These results describe controlled synthetic activity relationships,
+not verified shared sessions, attacks, or production accuracy.
+
+Reproduce the V0.9 evidence from the repository root:
+
+```bash
+python scripts/export_comparison_v09.py
+python -m unittest discover -s tests -q
+```
+
+The export command rewrites the default V0.9 evidence files.
+Use a separate output directory when independently comparing
+regenerated artifacts against the archived evidence.
+
+See the [V0.9 research design](docs/design-v0.9.md),
+[comparative results](docs/results-v0.9-comparison.md), and
+[versioned evidence](docs/evidence/v0.9/).
+
 Full methodology and interpretations:
 
 - [Research design](docs/research-design.md)
@@ -317,6 +354,8 @@ Full methodology and interpretations:
 - [V0.5 results](docs/results-v0.5.md)
 - [V0.7 research design](docs/design-v0.7.md)
 - [V0.7 cross-source results](docs/results-v0.7-cross-source.md)
+- [V0.8 three-source results](docs/results-v0.8-three-source.md)
+- [V0.9 comparative research results](docs/results-v0.9-comparison.md)
 
 ## Repository layout
 
@@ -330,6 +369,8 @@ datasets/synthetic/v0.4/     Versioned synthetic events, labels, manifest
 docs/                        Research design and validated results
 results/                     Locally generated reports (Git-ignored)
 docs/evidence/v0.7/          Archived synthetic cross-source evidence
+docs/evidence/v0.8/          Archived Zeek-to-host evidence
+docs/evidence/v0.9/          Comparative synthetic research evidence
 ```
 
 ## Limitations and responsible use
@@ -350,4 +391,4 @@ docs/evidence/v0.7/          Archived synthetic cross-source evidence
 - Extend processing-performance evaluation to additional hardware, larger workloads, and full-process memory measurements.
 - Extend real-format Windows/Linux compatibility and investigate additional Zeek-to-host negative controls, NAT ambiguity, clock skew, and larger controlled datasets.
 
-**Project maturity:** Research prototype (V0.8 Phase 2 locally verified; cloud CI pending); not a production SIEM or a validated malicious-attack classifier.
+**Project maturity:** Research prototype (V0.9 locally verified; V0.9 CI pending); not a production SIEM or a validated malicious-attack classifier.

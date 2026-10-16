@@ -1,0 +1,69 @@
+{
+  "benchmark_version": "v1.0",
+  "dataset": "controlled_v0.9_synthetic",
+  "limitations": [
+    "Synthetic inputs are not representative of production.",
+    "Timing excludes dataset generation, file ingestion, and report writing.",
+    "tracemalloc peak excludes allocations outside Python tracking and is not process RSS.",
+    "Operating-system scheduling and background load may affect timings.",
+    "Candidate counts are not confirmed attacks or verified sessions."
+  ],
+  "logical_cpu_count": 32,
+  "machine": "AMD64",
+  "measurement_scope": "in_memory_association_only",
+  "memory_method": "separate_untimed_association_run",
+  "memory_metric": "tracemalloc_peak_mib",
+  "platform": "Windows",
+  "production_performance_claim": false,
+  "python_version": "3.12.11",
+  "runs": [
+    {
+      "candidate_pair_count": 6,
+      "event_count": 32,
+      "host_mapping_count": 16,
+      "median_ms": 0.7041,
+      "repeats": 1,
+      "timings_ms": [
+        0.7171,
+        0.7041,
+        0.6956,
+        0.695,
+        0.7264
+      ],
+      "traced_peak_mib": 0.008650779724121094
+    },
+    {
+      "candidate_pair_count": 60,
+      "event_count": 320,
+      "host_mapping_count": 160,
+      "median_ms": 6.9641,
+      "repeats": 10,
+      "timings_ms": [
+        6.8984,
+        7.3352,
+        6.9641,
+        7.1922,
+        6.8277
+      ],
+      "traced_peak_mib": 0.16052913665771484
+    },
+    {
+      "candidate_pair_count": 300,
+      "event_count": 1600,
+      "host_mapping_count": 800,
+      "median_ms": 36.6608,
+      "repeats": 50,
+      "timings_ms": [
+        36.0121,
+        37.6626,
+        36.0951,
+        38.1689,
+        36.6608
+      ],
+      "traced_peak_mib": 0.9116744995117188
+    }
+  ],
+  "seed": 20261011,
+  "trials": 5,
+  "window_seconds": 120.0
+}

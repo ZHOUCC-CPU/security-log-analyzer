@@ -18,8 +18,9 @@ The prototype combines Zeek-based NTLM trust-boundary detection, selected Window
 | **V0.8 Phase 1** | Zeek schema adapter and regression tests | `00e95d2` (CI #10 passed) |
 | **V0.8 Phase 2** | Zeek-to-host association study, synthetic evidence and research report | CI #11 passed (Python 3.11/3.12; 318 tests each) |
 | **V0.9** | Three association methods, 16 synthetic cases, reproducible evidence and comparative research report | CI #12 passed (Python 3.11/3.12; 357 tests each) |
+| **V1.0 (in development)** | Offline normalized-JSONL demonstration, protocol evidence reporting, reliability tests, and controlled synthetic performance measurements | Local: 380 tests passed; CI pending |
 
-**Current test status:** V0.9 has 357 locally passing tests; V0.9 GitHub CI #12 passed 357 tests on Python 3.11 and 3.12. V0.8 Phase 2 CI #11 passed 318 tests on Python 3.11 and 3.12.
+**Current test status:** V1.0 development has 380 locally passing tests on Python 3.12. V1.0 GitHub CI is pending. V0.9 GitHub CI #13 passed 357 tests on Python 3.11 and 3.12.
 
 ## Research questions
 
@@ -371,7 +372,83 @@ results/                     Locally generated reports (Git-ignored)
 docs/evidence/v0.7/          Archived synthetic cross-source evidence
 docs/evidence/v0.8/          Archived Zeek-to-host evidence
 docs/evidence/v0.9/          Comparative synthetic research evidence
+docs/evidence/v1.0/          Controlled synthetic performance evidence
 ```
+
+## V1.0 development checkpoint
+
+V1.0 currently provides an offline demonstration using
+**already normalized JSONL observations** and explicit
+host-to-IP mappings. It does not directly ingest raw EVTX
+or arbitrary raw security logs.
+
+The demonstration reuses the existing V0.8 Zeek-to-host
+candidate association policy and does not consume
+ground-truth labels.
+
+### Run the offline demonstration
+
+From the repository root:
+
+```bash
+python scripts/demo_v10.py docs/evidence/v0.9/events.jsonl docs/evidence/v0.9/host-mappings.jsonl results/demo-v1.0-readme.json --window-seconds 120
+```
+
+With the included synthetic dataset, the command processes
+32 events and 16 host mappings and returns 6 candidate pairs.
+
+Each candidate includes evidence provenance and a
+`protocol_status` field:
+
+- `explicit_tcp`: TCP explicitly recorded by Zeek.
+- `not_recorded`: the protocol is not recorded.
+
+For the included dataset, all six candidates have
+`protocol_status=not_recorded`. Missing protocol evidence
+does not prove TCP traffic.
+
+These results represent investigative candidates,
+not confirmed shared sessions or attacks.
+
+### Controlled synthetic performance study
+
+The V1.0 study measures in-memory association time using
+five timed trials per scale. A separate untimed execution
+records the Python `tracemalloc` allocation peak.
+
+| Events | Candidates | Median time (ms) | Traced peak (MiB) |
+| ---: | ---: | ---: | ---: |
+| 32 | 6 | 0.704 | 0.009 |
+| 320 | 60 | 6.964 | 0.161 |
+| 1,600 | 300 | 36.661 | 0.912 |
+
+Timing excludes dataset generation, file ingestion,
+memory profiling, and report writing. Traced memory is
+not full-process RSS. The synthetic results do not
+establish production performance.
+
+To run a new benchmark:
+
+```bash
+python scripts/benchmark_performance_v10.py --repeats 1 10 50 --trials 5 --window-seconds 120 --output results/benchmark-v1.0-readme.json
+```
+
+Both commands refuse to overwrite existing output files.
+Use a new output filename for repeated runs. Timing
+measurements may vary between executions.
+
+### V1.0 documentation and evidence
+
+- [V1.0 research design](docs/design-v1.0.md)
+- [V1.0 user guide](docs/user-guide-v1.0.md)
+- [V1.0 performance research report](docs/results-v1.0-performance.md)
+- [V1.0 archived benchmark evidence](docs/evidence/v1.0/benchmark-results.json)
+- [V1.0 evidence manifest](docs/evidence/v1.0/manifest.json)
+
+**Release status:** Local development and experimental
+verification are complete for the features above.
+Final repository review, V1.0 GitHub CI, and release
+approval remain pending.
 
 ## Limitations and responsible use
 

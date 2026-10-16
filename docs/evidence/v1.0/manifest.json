@@ -1,0 +1,32 @@
+{
+  "archived_report": "benchmark-results.json",
+  "dataset": "controlled_v0.9_synthetic",
+  "environment": {
+    "logical_cpu_count": 32,
+    "machine": "AMD64",
+    "platform": "Windows",
+    "python_version": "3.12.11"
+  },
+  "evidence_type": "controlled_synthetic_performance",
+  "evidence_version": "v1.0",
+  "files": {
+    "benchmark-results.json": {
+      "bytes": 1785,
+      "sha256": "f58c0c9e9932f2ef283a1a1f220384f3eb802e12c31013fdeec2b39bcd40687c"
+    }
+  },
+  "measurement_scope": "in_memory_association_only",
+  "memory_method": "separate_untimed_association_run",
+  "memory_metric": "tracemalloc_peak_mib",
+  "production_performance_claim": false,
+  "scales": [
+    1,
+    10,
+    50
+  ],
+  "seed": 20261011,
+  "source_report": "results/benchmark-v1.0.json",
+  "timing_trials_per_scale": 5,
+  "traced_memory_runs_per_scale": 1,
+  "window_seconds": 120.0
+}

@@ -31,3 +31,6 @@ jobs:
 
       - name: Run automated tests
         run: python -m unittest discover -s tests -q
+
+      - name: Run optimized-mode input regressions
+        run: python -O -m unittest discover -s tests -p test_input_contract_v101.py -q

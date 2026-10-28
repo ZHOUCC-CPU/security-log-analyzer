@@ -140,3 +140,20 @@ class InputContractTests(unittest.TestCase):
             changed = copy.deepcopy(event)
             changed['source']['port'] = value
             self.assertFalse(validate_event(changed)['valid'])
+
+    def test_oversized_json_integer_library_error(self):
+        # Python 3.11/3.12 enforce an integer-digit limit in json.loads.
+        self.path.write_text('{"ts":' + '9' * 5000 + '}')
+        with self.assertRaisesRegex(ZeekParseError, 'invalid JSON'):
+            list(parse_zeek(self.path))
+
+    def test_oversized_json_integer_cli(self):
+        self.cli(('{"ts":' + '9' * 5000 + '}').encode())
+
+    def test_excessive_json_nesting_library_error(self):
+        self.path.write_text('{"ts":' + '[' * 10000 + '0' + ']' * 10000 + '}')
+        with self.assertRaisesRegex(ZeekParseError, 'invalid JSON'):
+            list(parse_zeek(self.path))
+
+    def test_excessive_json_nesting_cli(self):
+        self.cli(('{"ts":' + '[' * 10000 + '0' + ']' * 10000 + '}').encode())

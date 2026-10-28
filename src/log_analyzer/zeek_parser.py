@@ -128,7 +128,8 @@ def parse_zeek(path, log_type=None):
         if raw_line.lstrip().startswith("{"):
             try:
                 record = json.loads(raw_line)
-            except json.JSONDecodeError as exc:
+            except (ValueError, RecursionError) as exc:
+                # json.loads also rejects oversized integers and excessive nesting.
                 raise ZeekParseError(
                     f"{path.name}:{line_number}: invalid JSON"
                 ) from exc
